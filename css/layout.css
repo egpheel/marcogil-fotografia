@@ -42,7 +42,7 @@ hr {
   text-align: center;
   margin-top: -150px;
   overflow: hidden;
-  height: 250px;
+  height: 260px;
 }
 
 .logo-lockup .logo {
@@ -67,7 +67,7 @@ hr {
 
 .menu ul {
   list-style-type: none;
-  margin: -100px 50px 0px;
+  margin: -110px 50px 0px;
   padding: 0;
   overflow: hidden;
 }
@@ -247,7 +247,7 @@ hr {
 
 @media (max-width: 1200px) {
   .menu ul {
-    margin: -100px 25px 0px;
+    margin: -110px 25px 0px;
   }
   .menu ul li {
     padding: 0 25px;
@@ -268,7 +268,7 @@ hr {
     margin-top: -15px;
   }
   .menu ul {
-    margin: -100px 15px 0px;
+    margin: -110px 15px 0px;
   }
   .menu ul li {
     padding: 0 15px;
@@ -283,7 +283,7 @@ hr {
 
 @media (max-width: 880px) {
   .menu ul {
-    margin: -100px 0px 0px;
+    margin: -110px 0px 0px;
   }
   .menu ul li {
     padding: 0;
