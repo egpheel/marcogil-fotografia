@@ -1,13 +1,22 @@
 <?php
   $directory = new DirectoryIterator('../img/heroes/');
-  $num = 0;
   foreach ($directory as $fileinfo) {
     if ($fileinfo->isFile()) {
       if ($fileinfo->getExtension() == 'jpg') {
-        $num++;
+        $heroes[] = $fileinfo->getFilename();
       };
     };
   };
 
-  echo $num;
+  shuffle($heroes);
+
+  for ($i = 0; $i < count($heroes); $i++) {
+    if ($heroes[$i] == 'hero-img1.jpg') {
+      $tempFirstPos = $heroes[0];
+      $heroes[0] = $heroes[$i];
+      $heroes[$i] = $tempFirstPos;
+    };
+  };
+
+  echo json_encode($heroes);
 ?>

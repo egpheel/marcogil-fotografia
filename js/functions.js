@@ -32,32 +32,33 @@ $(function() {
 function changeHero() {
   var interval = 5000; //8secs
   var transition = '2s'; //2secs
-  var heroes;
+  var heroes = [];
   var current = 1;
+  var url = './img/heroes/';
 
-  $.get('./php-resources/countheroes.php', function(num) {
-    heroes = num;
+  $.get('./php-resources/countheroes.php', function(data) {
+    heroes = $.parseJSON(data);
   });
 
   $('.hero').css('background-image','url("./img/heroes/hero-img'+ current +'.jpg")');
   $('.hero').css('transition','background-image '+ transition +' ease-in-out');
 
   var heroChanger = setInterval(function() {
-    if (current > heroes) {
+    if (current > heroes.length) {
       current = 1;
     }
 
-    $('<img/>').attr('src', './img/heroes/hero-img'+ current +'.jpg').load(function() {
+    $('<img/>').attr('src', url + heroes[current-1]).load(function() {
       $(this).remove();
-      $('.hero').css('background-image','url("./img/heroes/hero-img'+ current +'.jpg")');
+      $('.hero').css('background-image','url('+ url + heroes[current-1] +')');
       current++;
     });
   }, interval)
 };
 
 function randomHero() {
-  var heroes = 9;
-  var randHero = Math.floor(Math.random() * 9) + 1;
+  var heroes = 14;
+  var randHero = Math.floor(Math.random() * heroes) + 1;
 
   $('.hero').css('background-image', 'url("./img/heroes/hero-img'+ randHero +'.jpg")');
 };
