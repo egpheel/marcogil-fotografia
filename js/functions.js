@@ -33,24 +33,25 @@ function changeHero() {
   var interval = 5000; //8secs
   var transition = '2s'; //2secs
   var heroes = [];
-  var current = 1;
+  var current = 0;
   var url = './img/heroes/';
 
   $.get('./php-resources/countheroes.php', function(data) {
     heroes = $.parseJSON(data);
   });
 
-  $('.hero').css('background-image','url("./img/heroes/hero-img'+ current +'.jpg")');
+  $('.hero').css('background-image','url("./img/heroes/hero-img'+ (current + 1) +'.jpg")');
   $('.hero').css('transition','background-image '+ transition +' ease-in-out');
+  current++; //skip the first one which is the same that is already showing
 
   var heroChanger = setInterval(function() {
     if (current > heroes.length) {
-      current = 1;
+      current = 0;
     }
 
-    $('<img/>').attr('src', url + heroes[current-1]).load(function() {
+    $('<img/>').attr('src', url + heroes[current]).load(function() {
       $(this).remove();
-      $('.hero').css('background-image','url('+ url + heroes[current-1] +')');
+      $('.hero').css('background-image','url('+ url + heroes[current] +')');
       current++;
     });
   }, interval)
