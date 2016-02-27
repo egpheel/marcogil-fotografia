@@ -1,0 +1,73 @@
+#trabalho
+  text-align: center
+  padding-top: 100px
+
+  h1
+    margin: 0
+    color: $heading
+    font-size: 42px
+
+  .intro
+    margin: 60px 0px 120px
+
+    p
+      color: $paragraph
+      font-size: 16px
+      letter-spacing: 1px
+      line-height: 2
+      text-align: justify
+
+  .categorias
+    +flex
+    height: 250px
+    margin-bottom: 100px
+
+    .cat1, .cat2, .cat3, .cat4, .cat5
+      position: relative
+      width: 20%
+      padding-top: 20%
+      overflow: hidden
+
+      .overlay
+        +position(absolute, 100%, 0px, null, 0px)
+        height: 100%
+        background: $overlay
+        +transition(0.3s)
+
+      &:hover .overlay
+        +position(absolute, 0%, 0px, null, 0px)
+
+    .cat1
+      background:
+        image: url('../img/cats/1.jpg')
+        size: cover
+        repeat: no-repeat
+        position: center center
+
+    .cat2
+      background:
+        image: url('../img/cats/2.jpg')
+        size: cover
+        repeat: no-repeat
+        position: center center
+
+    .cat3
+      background:
+        image: url('../img/cats/3.jpg')
+        size: cover
+        repeat: no-repeat
+        position: center center
+
+    .cat4
+      background:
+        image: url('../img/cats/4.jpg')
+        size: cover
+        repeat: no-repeat
+        position: center center
+
+    .cat5
+      background:
+        image: url('../img/cats/5.jpg')
+        size: cover
+        repeat: no-repeat
+        position: center center

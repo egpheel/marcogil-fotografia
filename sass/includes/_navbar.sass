@@ -1,0 +1,54 @@
+.logo-lockup
+  text-align: center
+  margin-top: -150px
+  overflow: hidden
+  height: 250px
+
+  .logo
+    margin: 0 auto
+    +size(360px)
+    +bradius(50%)
+    background:
+      color: $navbar-bg
+
+    img
+      padding-top: 55px
+
+.menu
+  font:
+    family: $secondary-font
+    size: 14px
+    weight: 700
+  letter-spacing: 1px
+  text-transform: uppercase
+
+  ul
+    list-style-type: none
+    margin: -100px 50px 0px
+    padding: 0
+    overflow: hidden
+
+    li
+      text-align: center
+      display: inline-block
+      padding: 0 40px
+
+      a
+        display: inline-block
+        color: $navbar-color
+        padding: 14px 16px
+        text:
+          decoration: none
+          align: center
+        +transition(0.3s ease-in-out)
+
+        &:hover
+          background:
+            color: $navbar-hover
+          +transition(0.3s ease-in-out)
+
+  .left
+    float: left
+
+  .right
+    float: right
