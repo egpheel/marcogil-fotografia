@@ -18,31 +18,34 @@
       text-align: justify
 
   .categorias
-    +flex
     height: 250px
     margin-bottom: 100px
 
     .cat1, .cat2, .cat3, .cat4, .cat5
+      display: block
+      float: left
       position: relative
       width: 20%
       padding-top: 20%
       overflow: hidden
       cursor: pointer
+      height: 250px
 
       .overlay
         +position(absolute, 100%, 0px, null, 0px)
         height: 25%
         background: $overlay
         +transition(0.3s)
-        padding-top: 17px
+        padding-top: 16px
 
-        a
+        strong
           color: $logo-color
           font:
             family: $secondary-font
             size: 24px
           text-transform: uppercase
 
+        a
           &:hover
             text-decoration: none
 

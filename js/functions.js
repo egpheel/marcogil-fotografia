@@ -21,8 +21,9 @@ $(function() {
 
   //change hero-img
   var webkit = /webkit/.test(navigator.userAgent.toLowerCase());
+  var iemobile = /iemobile/i.test(navigator.userAgent.toLowerCase());
 
-  if (webkit) {
+  if (webkit && !iemobile) {
     changeHero();
   } else {
     randomHero();
