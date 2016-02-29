@@ -130,7 +130,7 @@ hr {
 .showNavbar ul li img {
   display: inline-block;
   margin: 8px 10px;
-  max-height: 30px;
+  max-height: 32px;
 }
 
 .showNavbar ul li p {
@@ -142,9 +142,47 @@ hr {
   cursor: default;
 }
 
+.showNavbar .left a {
+  padding: 0;
+}
+
 #sobre {
   text-align: center;
   padding-top: 100px;
+}
+
+#sobre .sobre-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 auto;
+  width: 500px;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 50px;
+  margin-bottom: -50px;
+}
+
+#sobre .sobre-wrap .avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-image: url("../img/avatar.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#sobre .sobre-wrap .desc {
+  text-align: left;
+}
+
+#sobre .sobre-wrap .desc p {
+  color: rgba(91, 88, 61, 0.75);
+  font-style: italic;
 }
 
 #sobre h1 {
@@ -258,35 +296,35 @@ hr {
 }
 
 #trabalho .categorias .cat1 {
-  background-image: url("../img/cats/1.jpg");
+  background-image: url("../img/cats/Pessoas.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 #trabalho .categorias .cat2 {
-  background-image: url("../img/cats/2.jpg");
+  background-image: url("../img/cats/Paisagens.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 #trabalho .categorias .cat3 {
-  background-image: url("../img/cats/3.jpg");
+  background-image: url("../img/cats/Nocturnas.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 #trabalho .categorias .cat4 {
-  background-image: url("../img/cats/4.jpg");
+  background-image: url("../img/cats/Cidades.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 #trabalho .categorias .cat5 {
-  background-image: url("../img/cats/5.jpg");
+  background-image: url("../img/cats/Perspectivas.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -367,6 +405,14 @@ hr {
   }
   #sobre h1, #trabalho h1 {
     font-size: 32px;
+  }
+  #sobre .sobre-wrap {
+    display: block;
+    width: 100%;
+  }
+  #sobre .sobre-wrap .desc {
+    margin-top: 20px;
+    text-align: center;
   }
   #sobre .bio p {
     font-size: 14px;
