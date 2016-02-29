@@ -61,13 +61,13 @@ function changeHero() {
   current++; //skip the first one which is the same that is already showing
 
   var heroChanger = setInterval(function() {
+    if (current >= heroes.length) {
+      current = 0;
+    }
+
     if (typeof heroes[current] === 'undefined') {
       console.log('halt!');
       clearInterval(heroChanger);
-    }
-
-    if (current > heroes.length) {
-      current = 0;
     }
 
     $('<img/>').attr('src', url + heroes[current]).load(function() {
