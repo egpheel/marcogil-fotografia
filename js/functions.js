@@ -42,7 +42,7 @@ $(function() {
     changeHero();
   } else {
     randomHero();
-  }
+  };
 });
 
 function changeHero() {

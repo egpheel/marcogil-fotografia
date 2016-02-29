@@ -165,22 +165,23 @@ hr {
   text-align: justify;
 }
 
-#sobre .picwindow1 {
+#sobre .picwindow1, #sobre .picwindow2 {
   height: 200px;
   background-image: url("../img/picwindow1.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+#sobre .picwindow1 {
+  background-image: url("../img/picwindow1.jpg");
 }
 
 #sobre .picwindow2 {
-  height: 200px;
   background-image: url("../img/picwindow2.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 #trabalho {
@@ -353,7 +354,7 @@ hr {
 }
 
 @media (max-width: 740px) {
-  .menu {
+  .menu, .showNavbar {
     display: none;
   }
 }
@@ -369,6 +370,9 @@ hr {
   }
   #sobre .bio p {
     font-size: 14px;
+  }
+  #sobre .picwindow1, #sobre .picwindow2 {
+    background-attachment: initial;
   }
   #trabalho .intro p {
     font-size: 14px;
