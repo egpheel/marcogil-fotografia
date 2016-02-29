@@ -57,7 +57,7 @@ hr {
   padding-top: 55px;
 }
 
-.menu {
+.menu, .showNavbar {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -65,20 +65,20 @@ hr {
   text-transform: uppercase;
 }
 
-.menu ul {
+.menu ul, .showNavbar ul {
   list-style-type: none;
   margin: -110px 50px 0px;
   padding: 0;
   overflow: hidden;
 }
 
-.menu ul li {
+.menu ul li, .showNavbar ul li {
   text-align: center;
   display: inline-block;
   padding: 0 40px;
 }
 
-.menu ul li a {
+.menu ul li a, .showNavbar ul li a {
   display: inline-block;
   color: rgba(0, 0, 0, 0.6);
   padding: 14px 16px;
@@ -91,7 +91,7 @@ hr {
   transition: 0.3s ease-in-out;
 }
 
-.menu ul li a:hover {
+.menu ul li a:hover, .showNavbar ul li a:hover {
   background-color: rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -100,12 +100,46 @@ hr {
   transition: 0.3s ease-in-out;
 }
 
-.menu .left {
+.menu .left, .showNavbar .left {
   float: left;
 }
 
-.menu .right {
+.menu .right, .showNavbar .right {
   float: right;
+}
+
+.showNavbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.showNavbar ul {
+  margin-top: 0px;
+}
+
+.showNavbar ul li {
+  padding: 0;
+}
+
+.showNavbar ul li img {
+  display: inline-block;
+  margin: 8px 10px;
+  max-height: 30px;
+}
+
+.showNavbar ul li p {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 14px;
+  left: 120px;
+  cursor: default;
 }
 
 #sobre {
@@ -280,7 +314,7 @@ hr {
     margin-top: -15px;
   }
   .menu ul {
-    margin: -110px 15px 0px;
+    margin: -100px 15px 0px;
   }
   .menu ul li {
     padding: 0 15px;
@@ -295,7 +329,7 @@ hr {
 
 @media (max-width: 880px) {
   .menu ul {
-    margin: -110px 0px 0px;
+    margin: -100px 0px 0px;
   }
   .menu ul li {
     padding: 0;

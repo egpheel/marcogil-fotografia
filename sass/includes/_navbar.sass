@@ -14,7 +14,7 @@
     img
       padding-top: 55px
 
-.menu
+.menu, .showNavbar
   font:
     family: $secondary-font
     size: 14px
@@ -52,3 +52,25 @@
 
   .right
     float: right
+
+.showNavbar
+  +position(fixed, 0, 0, null, 0)
+  z-index: 5
+  background-color: transparentize($navbar-bg, 0.2)
+  box-shadow: 1px 1px 1px 1px $navbar-shadow
+  display: none
+
+  ul
+    margin-top: 0px
+
+    li
+      padding: 0
+      img
+        display: inline-block
+        margin: 8px 10px
+        max-height: 30px
+      p
+        display: inline-block
+        color: $navbar-color
+        +position(absolute, 14px, null, null, 120px)
+        cursor: default

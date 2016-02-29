@@ -2,23 +2,18 @@ var isNavbarShowing = false;
 
 $(window).scroll(function() {
   var wScroll = $(this).scrollTop();
-  var offset = $('.menu').offset().top;
+  var offset = $('.menu .left').offset().top;
 
   $('.hero h1').css('transform', 'translate(0px, '+ wScroll /2 +'%)')
 
   if (wScroll > offset) {
     if (!isNavbarShowing) {
-      console.log('show navbar');
-      $('.menu').css({'position' : 'fixed',
-                      'top' : '0',
-                      'z-index' : '0',
-                      'margin-top' : '100px'
-                    });
+      $('.showNavbar').fadeIn();
     }
     isNavbarShowing = true;
   } else {
     if (isNavbarShowing) {
-      console.log('hide navbar');
+      $('.showNavbar').fadeOut();
     }
     isNavbarShowing = false;
   };
