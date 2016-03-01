@@ -404,34 +404,74 @@ hr {
 
 #contacto .contact-wrap a .icon-facebook-square {
   color: rgba(59, 90, 154, 0.8);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacto .contact-wrap a .icon-facebook-square:hover {
   color: #3b5a9a;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacto .contact-wrap a .icon-instagram {
   color: rgba(79, 131, 171, 0.8);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacto .contact-wrap a .icon-instagram:hover {
   color: #4f83ab;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacto .contact-wrap a .icon-envelope-square {
   color: rgba(215, 195, 52, 0.8);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacto .contact-wrap a .icon-envelope-square:hover {
   color: #d7c334;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacto .contact-wrap a .icon-phone-square {
   color: rgba(75, 184, 74, 0.8);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacto .contact-wrap a .icon-phone-square:hover {
   color: #4bb84a;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacto .contact-form {
@@ -442,6 +482,11 @@ hr {
 #contacto .contact-form .form-control {
   padding: 20px;
   margin: 15px 0px;
+}
+
+#footer {
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 1200px) {
