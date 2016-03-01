@@ -152,7 +152,7 @@ hr {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 5;
+  z-index: 9999;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   display: none;
@@ -491,6 +491,24 @@ hr {
 }
 
 #contacto .contact-form .messageSent p {
+  font-size: 18px;
+}
+
+#contacto .contact-form .messageError {
+  display: none;
+  margin: 0 auto;
+  background-color: rgba(182, 58, 58, 0.9);
+  color: white;
+  padding: 20px 0px 10px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#contacto .contact-form .messageError p {
   font-size: 18px;
 }
 
