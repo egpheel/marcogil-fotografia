@@ -2,7 +2,6 @@
   include '_vars.php';
 
   if($_POST) {
-    $to = $mail;
     $from = strip_tags($_POST['email']);
     $name = strip_tags($_POST['nome']);
     $subject = "Contacto (Marco Gil - Fotografia)";
@@ -17,6 +16,7 @@
     $htmlmessage .= "<p>" . $message . "</p>";
     $htmlmessage .= "</body></html>";
 
-    mail($to,$subject,$htmlmessage,$headers);
+    mail($mail,$subject,$htmlmessage,$headers);    //testing purposes, using marco's personal email account
+    mail($noreply,$subject,$htmlmessage,$headers); //testing purposes, using nextepisode.pw noreply mail account
   };
 ?>
