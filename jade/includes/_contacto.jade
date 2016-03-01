@@ -1,1 +1,21 @@
 #contacto
+  h1 Vamos falar?
+  
+  .contact-wrap
+    a(href='#{facebook}', target='_blank')
+      span.icon-facebook-square
+    a(href='#{instagram}', target='_blank')  
+      span.icon-instagram
+    a(href='#{email}', target='_blank')
+      span.icon-envelope-square
+    a(href='#{phone}', target='_blank')  
+      span.icon-phone-square
+  
+  .contact-form
+    form
+      input.form-control(type='text', placeholder='Nome')
+      input.form-control(type='email', placeholder='Email')
+      textarea.form-control(rows='5', placeholder='Mensagem')
+      button.btn.btn-primary.btn-lg(type='submit') Enviar
+      
+      
