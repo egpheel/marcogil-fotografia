@@ -476,8 +476,28 @@ hr {
   width: 40%;
 }
 
+#contacto .contact-form button {
+  margin-top: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  padding: 15px 30px;
+  background-color: #2954a6;
+  border: 0;
+}
+
+#contacto .contact-form button:hover {
+  background-color: #194291;
+}
+
+#contacto .contact-form button:active {
+  background-color: #315496;
+}
+
 #contacto .contact-form .form-control {
   margin: 15px 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
 #footer {
