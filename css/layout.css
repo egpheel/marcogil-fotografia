@@ -476,6 +476,24 @@ hr {
   width: 40%;
 }
 
+#contacto .contact-form .messageSent {
+  display: none;
+  margin: 0 auto;
+  background-color: rgba(55, 179, 97, 0.9);
+  color: white;
+  padding: 20px 0px 10px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#contacto .contact-form .messageSent p {
+  font-size: 18px;
+}
+
 #contacto .contact-form button {
   margin-top: 10px;
   font-family: "Open Sans", sans-serif;

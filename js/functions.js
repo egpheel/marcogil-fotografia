@@ -50,13 +50,23 @@ $(function() {
   //contact mailer
   $('#contacto .contact-form form').submit(function(event) {
     event.preventDefault();
+    var nomeVal = $('.nome').val();
+    var emailVal = $('.email').val();
+    var messageVal = $('.message').val();
+
+    $('.nome').val('');
+    $('.email').val('');
+    $('.message').val('');
+
+    $('#contacto .contact-form form button').attr('disabled', 'disabled');
 
     $.post('./php-resources/mailer.php', {
-      nome: $('.nome').val(),
-      email: $('.email').val(),
-      message: $('.message').val()
+      nome: nomeVal,
+      email: emailVal,
+      message: messageVal
     }, function(data) {
-      console.log('hooray!');
+      $('#contacto .contact-form form button').hide();
+      $('#contacto .contact-form form .messageSent').show();
     });
   });
 });

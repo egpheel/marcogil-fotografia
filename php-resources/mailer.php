@@ -13,7 +13,7 @@
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
     $htmlmessage = "<html lang='en'><body>";
-    $htmlmessage .= "<h1>Mensagem de <a href='mailto:" . $from . "' style='text-decoration: none;'>" . $name . "</a></h1>";
+    $htmlmessage .= "<h1>Mensagem de <a href='mailto:" . $from . "' style='text-decoration: none; color: #474955'>" . $name . "</a></h1>";
     $htmlmessage .= "<p>" . $message . "</p>";
     $htmlmessage .= "</body></html>";
 
