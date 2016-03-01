@@ -46,6 +46,19 @@ $(function() {
 
   //initialize tooltips
   $('[data-toggle="tooltip"]').tooltip();
+
+  //contact mailer
+  $('#contacto .contact-form form').submit(function(event) {
+    event.preventDefault();
+
+    $.post('./php-resources/mailer.php', {
+      nome: $('.nome').val(),
+      email: $('.email').val(),
+      message: $('.message').val()
+    }, function(data) {
+      console.log('hooray!');
+    });
+  });
 });
 
 function changeHero() {

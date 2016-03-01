@@ -12,10 +12,10 @@
       span.icon-phone-square(data-toggle="tooltip", data-placement="top", title="#{phoneUser}")
   
   .contact-form
-    form
-      input.form-control(type='text', placeholder='Nome')
-      input.form-control(type='email', placeholder='Email')
-      textarea.form-control(rows='5', placeholder='Mensagem')
-      button.btn.btn-primary.btn-lg(type='submit') Enviar
+    form(action='', method='post')
+      input.form-control(type='text', placeholder='Nome', class='nome', name='nome')
+      input.form-control(type='email', placeholder='Email', class='email', name='email')
+      textarea.form-control(rows='5', placeholder='Mensagem', class='message', name='message')
+      button.btn.btn-primary.btn-lg(type='submit', name='submit') Enviar
       
       
