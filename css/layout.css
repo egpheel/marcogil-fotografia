@@ -484,10 +484,20 @@ hr {
   padding: 15px 30px;
   background-color: #2954a6;
   border: 0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacto .contact-form button:hover {
   background-color: #194291;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacto .contact-form button:active {
