@@ -43,6 +43,9 @@ $(function() {
   } else {
     randomHero();
   };
+
+  //initialize tooltips
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 function changeHero() {

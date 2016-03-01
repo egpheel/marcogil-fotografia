@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
 @import url(https://fonts.googleapis.com/css?family=Cabin:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon.eot?p3tglt");
@@ -392,10 +393,6 @@ hr {
   text-decoration: none;
 }
 
-#contacto .contact-wrap a:active {
-  text-decoration: none;
-}
-
 #contacto .contact-wrap a span {
   display: inline-block;
   font-size: 72px;
@@ -403,7 +400,7 @@ hr {
 }
 
 #contacto .contact-wrap a .icon-facebook-square {
-  color: rgba(59, 90, 154, 0.8);
+  color: rgba(59, 90, 154, 0.7);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -421,7 +418,7 @@ hr {
 }
 
 #contacto .contact-wrap a .icon-instagram {
-  color: rgba(79, 131, 171, 0.8);
+  color: rgba(79, 131, 171, 0.7);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -439,7 +436,7 @@ hr {
 }
 
 #contacto .contact-wrap a .icon-envelope-square {
-  color: rgba(215, 195, 52, 0.8);
+  color: rgba(215, 195, 52, 0.7);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -457,7 +454,7 @@ hr {
 }
 
 #contacto .contact-wrap a .icon-phone-square {
-  color: rgba(75, 184, 74, 0.8);
+  color: rgba(75, 184, 74, 0.7);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -480,13 +477,92 @@ hr {
 }
 
 #contacto .contact-form .form-control {
-  padding: 20px;
   margin: 15px 0px;
 }
 
 #footer {
-  height: 200px;
+  position: relative;
+  text-align: center;
+  height: 330px;
+  color: rgba(255, 255, 255, 0.7);
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+#footer .links-wrap {
+  padding-top: 50px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+#footer .links-wrap ul {
+  display: block;
+  margin-right: 37px;
+  list-style-type: none;
+}
+
+#footer .links-wrap ul li {
+  text-align: center;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+#footer .links-wrap ul li a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#footer .links-wrap ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#footer .mailphone-wrap {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  line-height: 1;
+}
+
+#footer .mailphone-wrap p {
+  margin: 0px 0px 20px;
+  cursor: default;
+}
+
+#footer .copyright-wrap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#footer .copyright-wrap a {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+#footer .copyright-wrap a:hover {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
 }
 
 @media (max-width: 1200px) {
@@ -563,6 +639,21 @@ hr {
   #contacto .contact-form {
     width: 90%;
   }
+  #footer .links-wrap ul li {
+    padding: 0px 0px;
+  }
+  #footer .links-wrap ul li a {
+    padding: 14px 12px;
+  }
+}
+
+@media (max-width: 630px) {
+  #footer .links-wrap {
+    font-size: 11px;
+  }
+  #footer .links-wrap ul li a {
+    padding: 14px 6px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -591,7 +682,27 @@ hr {
   #trabalho .intro p {
     font-size: 14px;
   }
-  #contacto .contact-wrap span {
-    padding: 0px 5px;
+  #contacto .contact-wrap a {
+    margin: 0px;
+  }
+  #contacto .contact-wrap a span {
+    margin: 0px 5px;
+  }
+  #footer {
+    height: 355px;
+  }
+  #footer hr, #footer .mailphone-wrap {
+    display: none;
+  }
+  #footer .links-wrap {
+    padding-top: 25px;
+    display: inline-block;
+    font-size: 12px;
+  }
+  #footer .links-wrap ul li {
+    display: block;
+  }
+  #footer .links-wrap ul li a {
+    padding: 14px 16px;
   }
 }

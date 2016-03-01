@@ -70,6 +70,25 @@
     .contact-form
       width: 90%
 
+  #footer
+    .links-wrap
+      ul
+        li
+          padding: 0px 0px
+
+          a
+            padding: 14px 12px
+
+@media (max-width: $m-s-break)
+  #footer
+    .links-wrap
+      font:
+        size: 11px
+      ul
+        li
+          a
+            padding: 14px 6px
+
 @media (max-width: $s-break)
   .hero
     h1
@@ -105,5 +124,25 @@
 
   #contacto
     .contact-wrap
-      span
-        padding: 0px 5px
+      a
+        margin: 0px
+        span
+          margin: 0px 5px
+
+  #footer
+    height: 355px
+
+    hr, .mailphone-wrap
+      display: none
+
+    .links-wrap
+      padding-top: 25px
+      display: inline-block
+      font:
+        size: 12px
+
+      ul
+        li
+          display: block
+          a
+            padding: 14px 16px
