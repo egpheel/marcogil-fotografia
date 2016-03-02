@@ -1,4 +1,3 @@
 <?php
-  $mail = 'marcosergioluisgil@gmail.com';
-  $noreply = 'noreply@nextepisode.pw';
+  $mail = 'noreply@nextepisode.pw';
 ?>

@@ -16,7 +16,6 @@
     $htmlmessage .= "<p>" . $message . "</p>";
     $htmlmessage .= "</body></html>";
 
-    //mail($mail,$subject,$htmlmessage,$headers);    //testing purposes, using marco's personal email account
-    mail($noreply,$subject,$htmlmessage,$headers); //testing purposes, using nextepisode.pw noreply mail account
+    mail($mail,$subject,$htmlmessage,$headers);
   };
 ?>
