@@ -689,6 +689,12 @@ hr {
   text-decoration: none;
 }
 
+@media (min-width: 1367px) {
+  .menu ul {
+    margin: -110px 150px 0px;
+  }
+}
+
 @media (max-width: 1366px) {
   .hero {
     background-size: auto 500px;
