@@ -56,11 +56,11 @@ hr {
 .hero {
   position: relative;
   z-index: -1;
-  height: 500px;
+  height: 490px;
   text-align: center;
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: auto 500px;
+  background-size: 100% auto;
   background-attachment: fixed;
   padding: 200px 0px;
 }
