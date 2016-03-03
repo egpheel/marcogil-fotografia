@@ -78,3 +78,42 @@
   .left
     a
       padding: 0
+
+.mobile
+  +position(fixed, 0, 0, null, 0)
+  z-index: 9998
+  background-color: transparentize($navbar-bg, 0.2)
+  box-shadow: 1px 1px 1px 1px $navbar-shadow
+  font:
+    family: $secondary-font
+    size: 11px
+    weight: 700
+  letter-spacing: 1px
+  text-transform: uppercase
+  text-align: center
+  display: none
+
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+    li
+      display: inline-block
+      padding: 0
+
+      img
+        display: inline-block
+        margin: 10px 5px
+        max-height: 32px
+
+      a
+        display: inline-block
+        color: $navbar-color
+        padding: 0px 2px
+        text:
+          decoration: none
+          align: center
+
+      .link
+        padding: 15px 2px

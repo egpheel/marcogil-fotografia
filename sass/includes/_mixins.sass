@@ -1,9 +1,9 @@
 @mixin bradius($radius)
   border-radius: $radius
 
-@mixin size($size)
-  width: $size
-  height: $size
+@mixin size($width, $height: $width)
+  width: $width
+  height: $height
 
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null)
   position: $position

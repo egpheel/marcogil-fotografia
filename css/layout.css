@@ -185,6 +185,52 @@ hr {
   padding: 0;
 }
 
+.mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  display: none;
+}
+
+.mobile ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile ul li {
+  display: inline-block;
+  padding: 0;
+}
+
+.mobile ul li img {
+  display: inline-block;
+  margin: 10px 5px;
+  max-height: 32px;
+}
+
+.mobile ul li a {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 0px 2px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mobile ul li .link {
+  padding: 15px 2px;
+}
+
 #sobre {
   text-align: center;
   padding-top: 100px;
@@ -518,7 +564,7 @@ hr {
   font-size: 20px;
   line-height: 1;
   padding: 15px 30px;
-  background-color: #2954a6;
+  background-color: rgba(28, 112, 212, 0.9);
   border: 0;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -528,7 +574,7 @@ hr {
 }
 
 #contacto .contact-form button:hover {
-  background-color: #194291;
+  background-color: rgba(28, 91, 166, 0.9);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -537,7 +583,7 @@ hr {
 }
 
 #contacto .contact-form button:active {
-  background-color: #315496;
+  background-color: rgba(69, 132, 205, 0.9);
 }
 
 #contacto .contact-form .form-control {
@@ -617,7 +663,6 @@ hr {
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
   font-size: 10px;
-  line-height: 1;
   letter-spacing: 1px;
   text-align: center;
 }
@@ -698,6 +743,9 @@ hr {
 @media (max-width: 740px) {
   .menu, .showNavbar {
     display: none;
+  }
+  .mobile {
+    display: block;
   }
   #contacto .contact-wrap span {
     padding: 0px 10px;
