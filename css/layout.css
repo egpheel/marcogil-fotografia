@@ -190,7 +190,7 @@ hr {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 9998;
+  z-index: 9999;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   font-family: "Open Sans", sans-serif;
@@ -215,7 +215,7 @@ hr {
 
 .mobile ul li img {
   display: inline-block;
-  margin: 10px 5px;
+  margin: 12px 5px;
   max-height: 32px;
 }
 
@@ -225,10 +225,24 @@ hr {
   padding: 0px 2px;
   text-decoration: none;
   text-align: center;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .mobile ul li .link {
-  padding: 15px 2px;
+  padding: 19px 2px 22px;
 }
 
 #sobre {
@@ -290,7 +304,6 @@ hr {
 
 #sobre .picwindow1, #sobre .picwindow2 {
   height: 200px;
-  background-image: url("../img/picwindow1.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -728,6 +741,9 @@ hr {
   .menu .left li {
     padding: 0 5px;
   }
+  #sobre .picwindow1, #sobre .picwindow2 {
+    background-attachment: initial;
+  }
   #trabalho .categorias .cat1, #trabalho .categorias .cat2 {
     width: 50%;
   }
@@ -789,9 +805,6 @@ hr {
   }
   #sobre .bio p {
     font-size: 14px;
-  }
-  #sobre .picwindow1, #sobre .picwindow2 {
-    background-attachment: initial;
   }
   #trabalho .intro p {
     font-size: 14px;
