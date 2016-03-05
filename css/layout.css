@@ -344,7 +344,7 @@ hr {
 }
 
 #trabalho .categorias {
-  height: 250px;
+  overflow: auto;
   margin-bottom: 100px;
 }
 
@@ -357,6 +357,11 @@ hr {
   overflow: hidden;
   cursor: pointer;
   height: 250px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #trabalho .categorias .cat1 .overlay, #trabalho .categorias .cat2 .overlay, #trabalho .categorias .cat3 .overlay, #trabalho .categorias .cat4 .overlay, #trabalho .categorias .cat5 .overlay {
@@ -379,10 +384,6 @@ hr {
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
-}
-
-#trabalho .categorias .cat1 .overlay a:hover, #trabalho .categorias .cat2 .overlay a:hover, #trabalho .categorias .cat3 .overlay a:hover, #trabalho .categorias .cat4 .overlay a:hover, #trabalho .categorias .cat5 .overlay a:hover {
-  text-decoration: none;
 }
 
 #trabalho .categorias .cat1:hover .overlay, #trabalho .categorias .cat2:hover .overlay, #trabalho .categorias .cat3:hover .overlay, #trabalho .categorias .cat4:hover .overlay, #trabalho .categorias .cat5:hover .overlay {
@@ -426,6 +427,58 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+#trabalho .catopen-wrap {
+  height: 250px;
+  display: none;
+}
+
+#trabalho .catopen-wrap .cat1open, #trabalho .catopen-wrap .cat2open, #trabalho .catopen-wrap .cat3open, #trabalho .catopen-wrap .cat4open, #trabalho .catopen-wrap .cat5open {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+
+#trabalho .catopen-wrap .cat1open .catDesc-wrap, #trabalho .catopen-wrap .cat2open .catDesc-wrap, #trabalho .catopen-wrap .cat3open .catDesc-wrap, #trabalho .catopen-wrap .cat4open .catDesc-wrap, #trabalho .catopen-wrap .cat5open .catDesc-wrap {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#trabalho .catopen-wrap .cat1open .catDesc-wrap h1, #trabalho .catopen-wrap .cat2open .catDesc-wrap h1, #trabalho .catopen-wrap .cat3open .catDesc-wrap h1, #trabalho .catopen-wrap .cat4open .catDesc-wrap h1, #trabalho .catopen-wrap .cat5open .catDesc-wrap h1 {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 42px;
+}
+
+#trabalho .catopen-wrap .cat1open .catDesc-wrap p, #trabalho .catopen-wrap .cat2open .catDesc-wrap p, #trabalho .catopen-wrap .cat3open .catDesc-wrap p, #trabalho .catopen-wrap .cat4open .catDesc-wrap p, #trabalho .catopen-wrap .cat5open .catDesc-wrap p {
+  width: 75%;
+  margin: 20px auto;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 2;
+  text-align: center;
+}
+
+#selected {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#notSelected {
+  opacity: 0.7;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #contacto {

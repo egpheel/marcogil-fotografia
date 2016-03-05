@@ -18,7 +18,7 @@
       text-align: justify
 
   .categorias
-    height: 250px
+    overflow: auto
     margin-bottom: 100px
 
     .cat1, .cat2, .cat3, .cat4, .cat5
@@ -30,6 +30,7 @@
       overflow: hidden
       cursor: pointer
       height: 250px
+      +transition(0.3s)
 
       .overlay
         +position(absolute, 100%, 0px, null, 0px)
@@ -44,10 +45,6 @@
             family: $secondary-font
             size: 24px
           text-transform: uppercase
-
-        a
-          &:hover
-            text-decoration: none
 
       &:hover .overlay
         +position(absolute, 75%, 0px, null, 0px)
@@ -87,3 +84,38 @@
         size: cover
         repeat: no-repeat
         position: center center
+
+
+  .catopen-wrap
+    height: 250px
+    display: none
+
+    .cat1open, .cat2open, .cat3open, .cat4open, .cat5open
+      +position(relative, 0, 0, null, 0)
+      display: none
+
+      .catDesc-wrap
+        width: 75%
+        margin: 0 auto
+
+        h1
+          margin: 0
+          color: $heading
+          font-size: 42px
+
+        p
+          width: 75%
+          margin: 20px auto
+          color: $paragraph
+          font-size: 16px
+          letter-spacing: 1px
+          line-height: 2
+          text-align: center
+
+#selected
+  opacity: 1
+  +transition(0.5s)
+
+#notSelected
+  opacity: 0.7
+  +transition(0.5s)
