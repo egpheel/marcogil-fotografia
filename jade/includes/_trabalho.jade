@@ -27,11 +27,17 @@
   
   .catopen-wrap
     .closeBtn
-      span.icon-close  
+      span.icon-close
     .cat1open
       .catDesc-wrap
         h1 #{cat1}
         p Despir-lhes a alma, ler-lhes o rosto, fotografar pessoas é como intervalar vidas por instantes ou perpetuar memórias.
+      .pic(data-toggle='modal', data-target='#myModal')
+        img(src='img/cats/Pessoas.jpg')
+      .pic(data-toggle='modal', data-target='#myModal')
+        img(src='img/cats/Pessoas.jpg')
+      .pic(data-toggle='modal', data-target='#myModal')
+        img(src='img/cats/Pessoas.jpg')
     .cat2open
       .catDesc-wrap
         h1 #{cat2}
@@ -48,3 +54,16 @@
       .catDesc-wrap
         h1 #{cat5}
         p Uma forma diferente e própria de ver o mundo, repleta de detalhes ou sem eles.
+  
+  .modal.fade#myModal(tabindex='-1', role='dialog', aria-labelledby='modalLabel')
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Fechar')
+            span(aria-hidden='true') &times;
+          h4.modal-title#modalLabel #{cat1}
+        .modal-body
+          img(src='img/heroes/hero-img1.jpg')
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis pariatur quo ipsam ad possimus inventore, sunt vitae. Molestiae ut, aliquid facilis quo facere, nemo amet voluptatum dolorum maxime quasi inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptas beatae praesentium eligendi voluptatibus facere cumque repudiandae, expedita incidunt quis assumenda error laboriosam laudantium! Fuga esse sunt quo itaque ipsam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam praesentium dolorem voluptatem quis fuga maxime placeat deleniti saepe accusantium alias assumenda quam optio obcaecati iste, dolore impedit magnam. Beatae, laborum.
+        .modal-footer
+          button.btn.btn-default(type='button', data-dismiss='modal') Fechar

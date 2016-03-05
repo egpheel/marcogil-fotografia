@@ -442,9 +442,9 @@ hr {
 }
 
 #trabalho .catopen-wrap {
-  height: 250px;
   display: none;
   position: relative;
+  z-index: 3;
 }
 
 #trabalho .catopen-wrap .closeBtn {
@@ -457,13 +457,24 @@ hr {
   height: 30px;
   border-radius: 4px;
   padding: 2px;
-  background: rgba(150, 150, 150, 0.4);
+  background: rgba(150, 150, 150, 0.3);
   font-size: 20px;
   cursor: pointer;
+  z-index: 2;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #trabalho .catopen-wrap .closeBtn:hover {
-  background: #969696;
+  background: rgba(150, 150, 150, 0.5);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #trabalho .catopen-wrap .cat1open, #trabalho .catopen-wrap .cat2open, #trabalho .catopen-wrap .cat3open, #trabalho .catopen-wrap .cat4open, #trabalho .catopen-wrap .cat5open {
@@ -495,6 +506,40 @@ hr {
   text-align: center;
 }
 
+#trabalho .catopen-wrap .cat1open .pic, #trabalho .catopen-wrap .cat2open .pic, #trabalho .catopen-wrap .cat3open .pic, #trabalho .catopen-wrap .cat4open .pic, #trabalho .catopen-wrap .cat5open .pic {
+  display: inline-block;
+  margin: 40px 30px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 1px;
+  box-shadow: 0 0 0 10px white, 0 0 0 11px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#trabalho .catopen-wrap .cat1open .pic img, #trabalho .catopen-wrap .cat2open .pic img, #trabalho .catopen-wrap .cat3open .pic img, #trabalho .catopen-wrap .cat4open .pic img, #trabalho .catopen-wrap .cat5open .pic img {
+  max-width: 150%;
+  position: relative;
+  top: -50px;
+  right: -50px;
+  bottom: -50px;
+  left: -50px;
+}
+
+#trabalho .catopen-wrap .cat1open .pic:hover, #trabalho .catopen-wrap .cat2open .pic:hover, #trabalho .catopen-wrap .cat3open .pic:hover, #trabalho .catopen-wrap .cat4open .pic:hover, #trabalho .catopen-wrap .cat5open .pic:hover {
+  box-shadow: 0 0 0 10px white, 0 0 0 11px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
 #selected {
   opacity: 1;
   -webkit-transition: 0.5s;
@@ -511,6 +556,23 @@ hr {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+}
+
+#myModal {
+  z-index: 10000;
+}
+
+#myModal .modal-body {
+  padding: 0;
+}
+
+#myModal .modal-body img {
+  max-width: 100%;
+}
+
+#myModal .modal-body p {
+  text-align: justify;
+  padding: 20px;
 }
 
 #contacto {

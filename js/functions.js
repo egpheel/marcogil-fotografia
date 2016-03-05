@@ -129,6 +129,13 @@ $(function() {
       galleryOpen = true;
     };
 
+    $('.closeBtn').click(function() {
+      $('.categorias').children('div').removeAttr('id');
+      $('.catopen-wrap').slideUp();
+      $(currentCatPrefix + '> .overlay').css('top', '');
+      galleryOpen = false;
+    });
+
     currentCat = cat;
     currentCatPrefix = catPrefix;
   });
