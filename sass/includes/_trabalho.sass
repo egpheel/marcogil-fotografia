@@ -89,6 +89,22 @@
   .catopen-wrap
     height: 250px
     display: none
+    position: relative
+
+    .closeBtn
+      color: $navbar-color
+      margin: 0
+      +position(absolute, 12px, 250px, null, null)
+      +size(30px)
+      +bradius(4px)
+      padding: 2px
+      background: $hr-color
+      font:
+        size: 20px
+      cursor: pointer
+
+      &:hover
+        background: opacify($hr-color, 1)
 
     .cat1open, .cat2open, .cat3open, .cat4open, .cat5open
       +position(relative, 0, 0, null, 0)
