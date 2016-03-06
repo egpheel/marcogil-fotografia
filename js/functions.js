@@ -122,6 +122,13 @@ $(function() {
       $('.catopen-wrap').slideUp();
       $(currentCatPrefix + '> .overlay').css('top', '');
       galleryOpen = false;
+
+      if ($('#trabalho').length) {
+        $('html, body').animate({
+          scrollTop: $('#trabalho').offset().top
+        }, 1000);
+        return false;
+      }
     } else {
       $('.categorias').children('div :not(#selected)').attr('id', 'notSelected');
       $(catPrefix + '> .overlay').css('top', '75%');
@@ -138,6 +145,23 @@ $(function() {
 
     currentCat = cat;
     currentCatPrefix = catPrefix;
+
+    if ($('#catsOpen').length) {
+      $('html, body').animate({
+        scrollTop: $('#catsOpen').offset().top - 100
+      }, 1000);
+      return false;
+    }
+  });
+
+  $('.pic').click(function() {
+    var picture = $('img', this).attr('src');
+    var parent = $(this).parent();
+    var title = $('.catDesc-wrap h1', parent).html();
+    var text = $('p', this).html();
+    $('#modalLabel').html(title);
+    $('.modal-body > img').attr('src', picture);
+    $('.modal-body > p').html(text);
   });
 });
 

@@ -344,7 +344,7 @@ hr {
 }
 
 #trabalho .intro {
-  margin: 60px 0px 120px;
+  margin: 60px 0px 95px;
 }
 
 #trabalho .intro p {
@@ -515,11 +515,11 @@ hr {
   border-radius: 1px;
   box-shadow: 0 0 0 10px white, 0 0 0 11px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: box-shadow 0.5s;
+  -moz-transition: box-shadow 0.5s;
+  -ms-transition: box-shadow 0.5s;
+  -o-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
 }
 
 #trabalho .catopen-wrap .cat1open .pic img, #trabalho .catopen-wrap .cat2open .pic img, #trabalho .catopen-wrap .cat3open .pic img, #trabalho .catopen-wrap .cat4open .pic img, #trabalho .catopen-wrap .cat5open .pic img {
@@ -531,8 +531,12 @@ hr {
   left: -50px;
 }
 
+#trabalho .catopen-wrap .cat1open .pic p, #trabalho .catopen-wrap .cat2open .pic p, #trabalho .catopen-wrap .cat3open .pic p, #trabalho .catopen-wrap .cat4open .pic p, #trabalho .catopen-wrap .cat5open .pic p {
+  display: none;
+}
+
 #trabalho .catopen-wrap .cat1open .pic:hover, #trabalho .catopen-wrap .cat2open .pic:hover, #trabalho .catopen-wrap .cat3open .pic:hover, #trabalho .catopen-wrap .cat4open .pic:hover, #trabalho .catopen-wrap .cat5open .pic:hover {
-  box-shadow: 0 0 0 10px white, 0 0 0 11px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 10px white, 0 0 0 11px rgba(0, 0, 0, 0.2), 0px 0px 2px 13px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;

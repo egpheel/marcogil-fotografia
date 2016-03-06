@@ -1,0 +1,5 @@
+form(action='php-resources/upload.php' method='post', enctype='multipart/form-data')
+  .form-group
+    label(for='#fileToUpload') Escolha a imagem:
+    input#fileToUpload(type='file', name='fileToUpload', accept='image/gif, image/jpeg, image/png')
+  input.btn.btn-default(type='submit', value='Enviar', name='submit')

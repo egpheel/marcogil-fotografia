@@ -8,7 +8,7 @@
     font-size: 42px
 
   .intro
-    margin: 60px 0px 120px
+    margin: 60px 0px 95px
 
     p
       color: $paragraph
@@ -139,14 +139,17 @@
         +bradius(1px)
         box-shadow: 0 0 0 10px $bg, 0 0 0 11px $pic-border
         cursor: pointer
-        +transition(0.3s)
+        +transition(box-shadow 0.5s)
 
         img
           max-width: 150%
           +position(relative, -50px, -50px, -50px, -50px)
 
+        p
+          display: none
+
         &:hover
-          box-shadow: 0 0 0 10px $bg, 0 0 0 11px opacify($pic-border, 0.2)
+          box-shadow: 0 0 0 10px $bg, 0 0 0 11px $pic-border, 0px 0px 2px 13px $navbar-shadow
           +transition(0.3s)
 
 #selected

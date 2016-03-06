@@ -8,7 +8,7 @@
         p É a minha visão sobre o mundo. São Pessoas, Paisagens, Perspectivas que são as minhas, a vida à luz do dia ou da noite e cidades que percorro com a mesma intensidade que as vivo. Tudo em fotografias que contam histórias ou estórias de um quotidiano que é o de todos ou o meu.
     .col-md-1
   
-  .categorias
+  .categorias#catsClosed
     .cat1
       .overlay
         strong #{cat1}
@@ -25,19 +25,23 @@
       .overlay
         strong #{cat5}
   
-  .catopen-wrap
-    .closeBtn
-      span.icon-close
+  .catopen-wrap#catsOpen
+    a(href='#trabalho')
+      .closeBtn
+        span.icon-close
     .cat1open
       .catDesc-wrap
         h1 #{cat1}
         p Despir-lhes a alma, ler-lhes o rosto, fotografar pessoas é como intervalar vidas por instantes ou perpetuar memórias.
       .pic(data-toggle='modal', data-target='#myModal')
         img(src='img/cats/Pessoas.jpg')
+        p Img1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis pariatur quo ipsam ad possimus inventore, sunt vitae. Molestiae ut, aliquid facilis quo facere, nemo amet voluptatum dolorum maxime quasi inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptas beatae praesentium eligendi voluptatibus facere cumque repudiandae, expedita incidunt quis assumenda error laboriosam laudantium! Fuga esse sunt quo itaque ipsam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam praesentium dolorem voluptatem quis fuga maxime placeat deleniti saepe accusantium alias assumenda quam optio obcaecati iste, dolore impedit magnam. Beatae, laborum.
       .pic(data-toggle='modal', data-target='#myModal')
-        img(src='img/cats/Pessoas.jpg')
+        img(src='img/cats/Perspectivas.jpg')
+        p Img2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis pariatur quo ipsam ad possimus inventore, sunt vitae. Molestiae ut, aliquid facilis quo facere, nemo amet voluptatum dolorum maxime quasi inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptas beatae praesentium eligendi voluptatibus facere cumque repudiandae, expedita incidunt quis assumenda error laboriosam laudantium! Fuga esse sunt quo itaque ipsam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam praesentium dolorem voluptatem quis fuga maxime placeat deleniti saepe accusantium alias assumenda quam optio obcaecati iste, dolore impedit magnam. Beatae, laborum.
       .pic(data-toggle='modal', data-target='#myModal')
-        img(src='img/cats/Pessoas.jpg')
+        img(src='img/cats/Paisagens.jpg')
+        p Img3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis pariatur quo ipsam ad possimus inventore, sunt vitae. Molestiae ut, aliquid facilis quo facere, nemo amet voluptatum dolorum maxime quasi inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptas beatae praesentium eligendi voluptatibus facere cumque repudiandae, expedita incidunt quis assumenda error laboriosam laudantium! Fuga esse sunt quo itaque ipsam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam praesentium dolorem voluptatem quis fuga maxime placeat deleniti saepe accusantium alias assumenda quam optio obcaecati iste, dolore impedit magnam. Beatae, laborum.
     .cat2open
       .catDesc-wrap
         h1 #{cat2}
@@ -61,9 +65,9 @@
         .modal-header
           button.close(type='button', data-dismiss='modal', aria-label='Fechar')
             span(aria-hidden='true') &times;
-          h4.modal-title#modalLabel #{cat1}
+          h4.modal-title#modalLabel
         .modal-body
-          img(src='img/heroes/hero-img1.jpg')
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis pariatur quo ipsam ad possimus inventore, sunt vitae. Molestiae ut, aliquid facilis quo facere, nemo amet voluptatum dolorum maxime quasi inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptas beatae praesentium eligendi voluptatibus facere cumque repudiandae, expedita incidunt quis assumenda error laboriosam laudantium! Fuga esse sunt quo itaque ipsam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam praesentium dolorem voluptatem quis fuga maxime placeat deleniti saepe accusantium alias assumenda quam optio obcaecati iste, dolore impedit magnam. Beatae, laborum.
+          img
+          p
         .modal-footer
           button.btn.btn-default(type='button', data-dismiss='modal') Fechar
