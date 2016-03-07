@@ -98,7 +98,7 @@
         <div class="col-md-1"></div>
       </div>
     </div>
-    <hr>
+    <hr><?php include "php-resources/gallery.php"; ?>
     <div id="trabalho">
       <h1>O meu trabalho</h1>
       <div class="container">
@@ -134,38 +134,29 @@
             <h1>Pessoas</h1>
             <p>Despir-lhes a alma, ler-lhes o rosto, fotografar pessoas é como intervalar vidas por instantes ou perpetuar memórias.</p>
           </div>
-          <div data-toggle="modal" data-target="#myModal" class="pic"><img src="img/cats/Pessoas.jpg">
-            <p>Img1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis pariatur quo ipsam ad possimus inventore, sunt vitae. Molestiae ut, aliquid facilis quo facere, nemo amet voluptatum dolorum maxime quasi inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptas beatae praesentium eligendi voluptatibus facere cumque repudiandae, expedita incidunt quis assumenda error laboriosam laudantium! Fuga esse sunt quo itaque ipsam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam praesentium dolorem voluptatem quis fuga maxime placeat deleniti saepe accusantium alias assumenda quam optio obcaecati iste, dolore impedit magnam. Beatae, laborum.</p>
-          </div>
-          <div data-toggle="modal" data-target="#myModal" class="pic"><img src="img/cats/Perspectivas.jpg">
-            <p>Img2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis pariatur quo ipsam ad possimus inventore, sunt vitae. Molestiae ut, aliquid facilis quo facere, nemo amet voluptatum dolorum maxime quasi inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptas beatae praesentium eligendi voluptatibus facere cumque repudiandae, expedita incidunt quis assumenda error laboriosam laudantium! Fuga esse sunt quo itaque ipsam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam praesentium dolorem voluptatem quis fuga maxime placeat deleniti saepe accusantium alias assumenda quam optio obcaecati iste, dolore impedit magnam. Beatae, laborum.</p>
-          </div>
-          <div data-toggle="modal" data-target="#myModal" class="pic"><img src="img/cats/Paisagens.jpg">
-            <p>Img3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis pariatur quo ipsam ad possimus inventore, sunt vitae. Molestiae ut, aliquid facilis quo facere, nemo amet voluptatum dolorum maxime quasi inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptas beatae praesentium eligendi voluptatibus facere cumque repudiandae, expedita incidunt quis assumenda error laboriosam laudantium! Fuga esse sunt quo itaque ipsam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam praesentium dolorem voluptatem quis fuga maxime placeat deleniti saepe accusantium alias assumenda quam optio obcaecati iste, dolore impedit magnam. Beatae, laborum.</p>
-          </div>
         </div>
         <div class="cat2open">
           <div class="catDesc-wrap">
             <h1>Paisagens</h1>
-            <p>Com ou sem horizonte, é aqui que podemos ser felizes se nos resignarmos apenas a olhar.</p>
+            <p>Com ou sem horizonte, é aqui que podemos ser felizes se nos resignarmos apenas a olhar.</p><?php galleryCat('cat2'); ?>
           </div>
         </div>
         <div class="cat3open">
           <div class="catDesc-wrap">
             <h1>Nocturnas</h1>
-            <p>É como caçar constelações. Ou fazer acordar o mundo das estrelas, dar luz ao silêncio e aproveitar uma galáxia de cores que se aproxima com o nascer do dia ou o cair da noite.</p>
+            <p>É como caçar constelações. Ou fazer acordar o mundo das estrelas, dar luz ao silêncio e aproveitar uma galáxia de cores que se aproxima com o nascer do dia ou o cair da noite.</p><?php galleryCat('cat3'); ?>
           </div>
         </div>
         <div class="cat4open">
           <div class="catDesc-wrap">
             <h1>Cidades</h1>
-            <p>A história das cidades do mundo em geral é longa, pelo que decidi fazê-la de instantes. São lapsos de um quotidiano urbano à luz do dia ou da noite.</p>
+            <p>A história das cidades do mundo em geral é longa, pelo que decidi fazê-la de instantes. São lapsos de um quotidiano urbano à luz do dia ou da noite.</p><?php galleryCat('cat4'); ?>
           </div>
         </div>
         <div class="cat5open">
           <div class="catDesc-wrap">
             <h1>Perspectivas</h1>
-            <p>Uma forma diferente e própria de ver o mundo, repleta de detalhes ou sem eles.</p>
+            <p>Uma forma diferente e própria de ver o mundo, repleta de detalhes ou sem eles.</p><?php galleryCat('cat5'); ?>
           </div>
         </div>
       </div>

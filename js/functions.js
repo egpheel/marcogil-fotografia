@@ -119,7 +119,7 @@ $(function() {
 
     if ($(catPrefix).css('opacity') === '1' && galleryOpen) {
       $('.categorias').children('div').removeAttr('id');
-      $('.catopen-wrap').slideUp();
+      $('.catopen-wrap').slideUp(2000);
       $(currentCatPrefix + '> .overlay').css('top', '');
       galleryOpen = false;
 
@@ -138,7 +138,7 @@ $(function() {
 
     $('.closeBtn').click(function() {
       $('.categorias').children('div').removeAttr('id');
-      $('.catopen-wrap').slideUp();
+      $('.catopen-wrap').slideUp(2000);
       $(currentCatPrefix + '> .overlay').css('top', '');
       galleryOpen = false;
     });
@@ -159,6 +159,9 @@ $(function() {
     var parent = $(this).parent();
     var title = $('.catDesc-wrap h1', parent).html();
     var text = $('p', this).html();
+
+    picture = picture.replace('/thumbs/', '/');
+
     $('#modalLabel').html(title);
     $('.modal-body > img').attr('src', picture);
     $('.modal-body > p').html(text);

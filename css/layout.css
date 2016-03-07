@@ -522,15 +522,6 @@ hr {
   transition: box-shadow 0.5s;
 }
 
-#trabalho .catopen-wrap .cat1open .pic img, #trabalho .catopen-wrap .cat2open .pic img, #trabalho .catopen-wrap .cat3open .pic img, #trabalho .catopen-wrap .cat4open .pic img, #trabalho .catopen-wrap .cat5open .pic img {
-  max-width: 150%;
-  position: relative;
-  top: -50px;
-  right: -50px;
-  bottom: -50px;
-  left: -50px;
-}
-
 #trabalho .catopen-wrap .cat1open .pic p, #trabalho .catopen-wrap .cat2open .pic p, #trabalho .catopen-wrap .cat3open .pic p, #trabalho .catopen-wrap .cat4open .pic p, #trabalho .catopen-wrap .cat5open .pic p {
   display: none;
 }
