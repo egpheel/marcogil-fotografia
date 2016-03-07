@@ -2,7 +2,7 @@
   form(action='php-resources/upload.php' method='post', enctype='multipart/form-data')
     .form-group.left
       .radio
-        p Categorias:
+        p <strong>Categorias:</strong>
         label.radio-inline
           input(id='cat1', type='radio', value='cat1', name='categories')
           | #{cat1}
@@ -18,10 +18,11 @@
         label.radio-inline
           input(id='cat5', type='radio', value='cat5', name='categories')
           | #{cat5}
-      label(for='#fileToUpload') Escolha a imagem:
+      label(for='#fileToUpload') Escolha a fotografia:
       input#fileToUpload(type='file', name='fileToUpload', accept='image/gif, image/jpeg, image/png')
       label(for='#thumbToUpload') Escolha o thumbnail:
       input#thumbToUpload(type='file', name='thumbToUpload', accept='image/gif, image/jpeg, image/png')
     .form-group.right
-      textarea.form-control(rows='6', placeholder='Descrição', class='texto', name='texto')
+      input.form-control#loc(type='text', placeholder='Localização', name='loc')
+      textarea.form-control(rows='7', placeholder='Descrição', class='texto', name='texto')
     input.btn.btn-default.btn-lg(type='submit', value='Enviar', name='submit')

@@ -573,7 +573,14 @@ hr {
   max-width: 100%;
 }
 
-#myModal .modal-body p {
+#myModal .modal-body .loc {
+  color: rgba(0, 0, 0, 0.6);
+  text-align: right;
+  margin: 5px 10px;
+  font-size: 12px;
+}
+
+#myModal .modal-body .desc {
   margin: 20px auto;
   padding: 30px;
   color: rgba(0, 0, 0, 0.8);
@@ -583,7 +590,7 @@ hr {
   text-align: justify;
 }
 
-#myModal .modal-body p br {
+#myModal .modal-body .desc br {
   line-height: 2.5;
 }
 

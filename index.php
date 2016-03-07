@@ -173,7 +173,8 @@
               <h4 id="modalLabel" class="modal-title"></h4>
             </div>
             <div class="modal-body"><img>
-              <p></p>
+              <p class="loc"></p>
+              <p class="desc"></p>
             </div>
             <div class="modal-footer">
               <button type="button" data-dismiss="modal" class="btn btn-default">Fechar</button>

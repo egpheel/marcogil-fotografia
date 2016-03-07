@@ -1,0 +1,44 @@
+# INFO FEED FILE
+001: Lisboa, Portugal
+002: Lisboa, Portugal
+807: Aldeia de São Francisco de Assis, Portugal
+820: Aldeia de São Francisco de Assis, Portugal
+832: Cabeço do Pião, Portugal
+838: Aldeia de São Francisco de Assis, Portugal
+841: Aldeia de São Francisco de Assis, Portugal
+849: Aldeia de São Francisco de Assis, Portugal
+850: Aldeia de São Francisco de Assis, Portugal
+880: Aldeia de São Francisco de Assis, Portugal
+921: Aldeia de São Francisco de Assis, Portugal
+961: Amesterdão, Holanda
+972: Amesterdão, Holanda
+977: Amesterdão, Holanda
+1002: Amesterdão, Holanda
+1005: Amesterdão, Holanda
+1056: Amesterdão, Holanda
+1063: Aldeia de São Francisco de Assis, Portugal
+1164: Amesterdão, Holanda
+1246: Águas Radium, Sortelha, Portugal
+1257: Covilhã, Portugal 
+1285: Águas Radium, Sortelha, Portugal
+1330: Paris, França
+1445: Paris, França
+1858: Caria, Portugal
+1914: Lisboa, Portugal 
+1916-(2): Lisboa, Portugal 
+1941: Lisboa, Portugal 
+1947: Minas da Panasqueira, Portugal
+1985: Lisboa, Portugal 
+2012: Aldeia de São Francisco de Assis, Portugal
+2066: Aldeia de São Francisco de Assis, Portugal
+2072: Portela de Unhais, Portugal
+2075: Portela de Unhais, Portugal
+2106: Lisboa, Portugal
+2140: Aldeia de São Francisco de Assis, Portugal
+2143: Aldeia de São Francisco de Assis, Portugal
+2147: Portela de Unhais, Portugal
+2160: Minas da Panasqueira, Portugal
+2295: Lisboa, Portugal
+2383: Lisboa, Portugal
+2430: Lisboa, Portugal
+7936: Londres, Inglaterra

@@ -27,26 +27,33 @@
   $imageFileType = pathinfo($foto,PATHINFO_EXTENSION);
 
   $desc_file = $target_dir ."_desc.txt";
+  $loc_file = $target_dir ."_loc.txt";
 
   $temp = explode('.', basename($_FILES["fileToUpload"]["name"]));
   $ext  = array_pop($temp);
   $pic_name = implode('.', $temp);
 
   $text = $pic_name . ": " . $_POST["texto"] . "\r\n";
+  $loc = $pic_name . ": " . $_POST["loc"] . "\r\n";
 
   $target_dir = "../../img/cats/". $cat ."/thumbs/";
   $thumbnail = $target_dir . basename($_FILES["thumbToUpload"]["name"]);
   $imageFileType = pathinfo($thumbnail,PATHINFO_EXTENSION);
 
-  if(!file_exists($desc_file)) {
-    $file = tmpfile();
-    file_put_contents($desc_file, "# DESC FILE\r\n", FILE_APPEND);
+  function writeFile($inputfile, $what, $firstline="# INFO FEED FILE\r\n") {
+    if(!file_exists($inputfile)) {
+      $file = tmpfile();
+      file_put_contents($inputfile, $firstline, FILE_APPEND);
+    }
+
+    $file = fopen($inputfile, "a+");
+
+    file_put_contents($inputfile, $what, FILE_APPEND);
+    fclose($file);
   }
 
-  $file = fopen($desc_file, "a+");
-
-  file_put_contents($desc_file, $text, FILE_APPEND);
-  fclose($file);
+  writeFile($desc_file, $text);
+  writeFile($loc_file, $loc);
 
   if (basename($_FILES["fileToUpload"]["name"]) != basename($_FILES["thumbToUpload"]["name"])) {
     echo "O ficheiro e o thumbnail têm de ter o mesmo nome.";
