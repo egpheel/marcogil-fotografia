@@ -167,6 +167,7 @@
   z-index: 10000
 
   .modal-body
+    position: relative
     padding: 0
 
     img
@@ -179,6 +180,14 @@
       font:
         size: 12px
 
+    span
+      position: absolute
+      color: $quote
+      left: 20px
+      font:
+        size: 90px
+      z-index: 1
+
     .desc
       margin: 20px auto
       padding: 30px
@@ -187,6 +196,8 @@
       letter-spacing: 1px
       line-height: 1.5
       text-align: justify
+      text-indent: 20px
+      z-index: 2
 
       br
         line-height: 2.5

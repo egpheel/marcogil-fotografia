@@ -173,7 +173,7 @@
               <h4 id="modalLabel" class="modal-title"></h4>
             </div>
             <div class="modal-body"><img>
-              <p class="loc"></p>
+              <p class="loc"></p><span class="icon-quote-left"></span>
               <p class="desc"></p>
             </div>
             <div class="modal-footer">
