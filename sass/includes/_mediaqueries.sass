@@ -16,6 +16,15 @@
       li
         padding: 0 25px
 
+  #trabalho
+    .catopen-wrap
+      .cat1open, .cat2open, .cat3open, .cat4open, .cat5open
+        .catDesc-wrap
+          width: 100%
+
+        .pic-wrap
+          width: 100%
+
 @media (max-width: $xl-break)
   .logo-lockup
     margin-top: -100px
@@ -41,6 +50,11 @@
       li
         padding: 0 25px
 
+  #sobre
+    .picwindow1, .picwindow2
+      background:
+        attachment: initial
+
   #contacto
     .contact-form
       width: 70%
@@ -59,11 +73,6 @@
       li
         padding: 0 5px
 
-  #sobre
-    .picwindow1, .picwindow2
-      background:
-        attachment: initial
-
   #trabalho
     .categorias
       .cat1, .cat2
@@ -74,12 +83,35 @@
         width: 100%
         margin-bottom: 100px
 
+      .cat1, .cat2, .cat3, .cat4, .cat5
+        .overlay
+          top: 75% !important
+
+        &:hover .overlay
+          background-color: opacify($overlay, 0.2)
+
 @media (max-width: $m-break)
   .menu, .showNavbar
     display: none
 
   .mobile
     display: block
+
+  #trabalho
+    .catopen-wrap
+      .cat1open, .cat2open, .cat3open, .cat4open, .cat5open
+        .catDesc-wrap
+          width: 100%
+
+        .pic-wrap
+          width: 100%
+
+          .pic
+            +size(100px)
+            margin: 30px 20px
+
+      .closeBtn
+        right: 10%
 
   #contacto
     .contact-wrap
@@ -114,9 +146,24 @@
       width: 300px
       border: 4px solid $logo-color
 
-  #sobre, #trabalho
+  #sobre, #trabalho, #contacto
     h1
       font-size: 32px
+
+  #trabalho
+    .catopen-wrap
+      .cat1open, .cat2open, .cat3open, .cat4open, .cat5open
+        .catDesc-wrap
+          h1
+            font-size: 32px
+
+          p
+            font-size: 14px
+
+      .closeBtn
+        top: 9px
+        +size(25px)
+        font-size: 18px
 
   #sobre
     .sobre-wrap
@@ -135,6 +182,10 @@
     .intro
       p
         font-size: 14px
+
+    .catopen-wrap
+      .closeBtn
+        right: 5%
 
   #contacto
     .contact-wrap

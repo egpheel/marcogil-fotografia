@@ -94,7 +94,7 @@
     .closeBtn
       color: $navbar-color
       margin: 0
-      +position(absolute, 12px, 250px, null, null)
+      +position(absolute, 12px, 20%, null, null)
       +size(30px)
       +bradius(4px)
       padding: 2px
@@ -119,34 +119,41 @@
 
         h1
           margin: 0
-          color: $heading
+          color: $category-heading
           font-size: 42px
 
         p
           width: 75%
           margin: 20px auto
-          color: $paragraph
+          color: $category-paragraph
           font-size: 16px
           letter-spacing: 1px
           line-height: 2
           text-align: center
 
-      .pic
-        display: inline-block
-        margin: 40px 30px
-        +size(150px)
-        overflow: hidden
-        +bradius(1px)
-        box-shadow: 0 0 0 10px $bg, 0 0 0 11px $pic-border
-        cursor: pointer
-        +transition(box-shadow 0.5s)
+      .pic-wrap
+        width: 80%
+        margin: 0 auto
 
-        p
-          display: none
+        .pic
+          display: inline-block
+          margin: 40px 30px
+          +size(150px)
+          overflow: hidden
+          +bradius(1px)
+          box-shadow: 0 0 0 10px $bg, 0 0 0 11px $pic-border
+          cursor: pointer
+          +transition(box-shadow 0.5s)
 
-        &:hover
-          box-shadow: 0 0 0 10px $bg, 0 0 0 11px $pic-border, 0px 0px 2px 13px $navbar-shadow
-          +transition(0.3s)
+          img
+            max-width: 100%
+
+          p
+            display: none
+
+          &:hover
+            box-shadow: 0 0 0 10px $bg, 0 0 0 11px $pic-border, 0px 0px 2px 13px $navbar-shadow
+            +transition(0.3s)
 
 #selected
   opacity: 1
@@ -166,5 +173,13 @@
       max-width: 100%
 
     p
+      margin: 20px auto
+      padding: 30px
+      color: $paragraph
+      font-size: 16px
+      letter-spacing: 1px
+      line-height: 1.5
       text-align: justify
-      padding: 20px
+
+      br
+        line-height: 2.5

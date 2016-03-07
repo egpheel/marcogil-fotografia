@@ -110,7 +110,7 @@
         </div>
         <div class="col-md-1"></div>
       </div>
-      <div id="catsClosed" class="categorias">
+      <div class="categorias">
         <div class="cat1">
           <div class="overlay"><strong>Pessoas</strong></div>
         </div>
@@ -138,25 +138,26 @@
         <div class="cat2open">
           <div class="catDesc-wrap">
             <h1>Paisagens</h1>
-            <p>Com ou sem horizonte, é aqui que podemos ser felizes se nos resignarmos apenas a olhar.</p><?php galleryCat('cat2'); ?>
+            <p>Com ou sem horizonte, é aqui que podemos ser felizes se nos resignarmos apenas a olhar.</p>
           </div>
         </div>
         <div class="cat3open">
           <div class="catDesc-wrap">
             <h1>Nocturnas</h1>
-            <p>É como caçar constelações. Ou fazer acordar o mundo das estrelas, dar luz ao silêncio e aproveitar uma galáxia de cores que se aproxima com o nascer do dia ou o cair da noite.</p><?php galleryCat('cat3'); ?>
+            <p>É como caçar constelações. Ou fazer acordar o mundo das estrelas, dar luz ao silêncio e aproveitar uma galáxia de cores que se aproxima com o nascer do dia ou o cair da noite.</p>
           </div>
+          <div class="pic-wrap"><?php galleryCat('cat3'); ?></div>
         </div>
         <div class="cat4open">
           <div class="catDesc-wrap">
             <h1>Cidades</h1>
-            <p>A história das cidades do mundo em geral é longa, pelo que decidi fazê-la de instantes. São lapsos de um quotidiano urbano à luz do dia ou da noite.</p><?php galleryCat('cat4'); ?>
+            <p>A história das cidades do mundo em geral é longa, pelo que decidi fazê-la de instantes. São lapsos de um quotidiano urbano à luz do dia ou da noite.</p>
           </div>
         </div>
         <div class="cat5open">
           <div class="catDesc-wrap">
             <h1>Perspectivas</h1>
-            <p>Uma forma diferente e própria de ver o mundo, repleta de detalhes ou sem eles.</p><?php galleryCat('cat5'); ?>
+            <p>Uma forma diferente e própria de ver o mundo, repleta de detalhes ou sem eles.</p>
           </div>
         </div>
       </div>

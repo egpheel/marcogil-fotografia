@@ -119,7 +119,7 @@ $(function() {
 
     if ($(catPrefix).css('opacity') === '1' && galleryOpen) {
       $('.categorias').children('div').removeAttr('id');
-      $('.catopen-wrap').slideUp(2000);
+      $('.catopen-wrap').slideUp(1200);
       $(currentCatPrefix + '> .overlay').css('top', '');
       galleryOpen = false;
 
@@ -138,7 +138,7 @@ $(function() {
 
     $('.closeBtn').click(function() {
       $('.categorias').children('div').removeAttr('id');
-      $('.catopen-wrap').slideUp(2000);
+      $('.catopen-wrap').slideUp(1200);
       $(currentCatPrefix + '> .overlay').css('top', '');
       galleryOpen = false;
     });

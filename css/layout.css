@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
 @import url(https://fonts.googleapis.com/css?family=Cabin:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,700italic);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon.eot?ctig5");
@@ -452,7 +451,7 @@ hr {
   margin: 0;
   position: absolute;
   top: 12px;
-  right: 250px;
+  right: 20%;
   width: 30px;
   height: 30px;
   border-radius: 4px;
@@ -492,21 +491,26 @@ hr {
 
 #trabalho .catopen-wrap .cat1open .catDesc-wrap h1, #trabalho .catopen-wrap .cat2open .catDesc-wrap h1, #trabalho .catopen-wrap .cat3open .catDesc-wrap h1, #trabalho .catopen-wrap .cat4open .catDesc-wrap h1, #trabalho .catopen-wrap .cat5open .catDesc-wrap h1 {
   margin: 0;
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.7);
   font-size: 42px;
 }
 
 #trabalho .catopen-wrap .cat1open .catDesc-wrap p, #trabalho .catopen-wrap .cat2open .catDesc-wrap p, #trabalho .catopen-wrap .cat3open .catDesc-wrap p, #trabalho .catopen-wrap .cat4open .catDesc-wrap p, #trabalho .catopen-wrap .cat5open .catDesc-wrap p {
   width: 75%;
   margin: 20px auto;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.6);
   font-size: 16px;
   letter-spacing: 1px;
   line-height: 2;
   text-align: center;
 }
 
-#trabalho .catopen-wrap .cat1open .pic, #trabalho .catopen-wrap .cat2open .pic, #trabalho .catopen-wrap .cat3open .pic, #trabalho .catopen-wrap .cat4open .pic, #trabalho .catopen-wrap .cat5open .pic {
+#trabalho .catopen-wrap .cat1open .pic-wrap, #trabalho .catopen-wrap .cat2open .pic-wrap, #trabalho .catopen-wrap .cat3open .pic-wrap, #trabalho .catopen-wrap .cat4open .pic-wrap, #trabalho .catopen-wrap .cat5open .pic-wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#trabalho .catopen-wrap .cat1open .pic-wrap .pic, #trabalho .catopen-wrap .cat2open .pic-wrap .pic, #trabalho .catopen-wrap .cat3open .pic-wrap .pic, #trabalho .catopen-wrap .cat4open .pic-wrap .pic, #trabalho .catopen-wrap .cat5open .pic-wrap .pic {
   display: inline-block;
   margin: 40px 30px;
   width: 150px;
@@ -522,11 +526,15 @@ hr {
   transition: box-shadow 0.5s;
 }
 
-#trabalho .catopen-wrap .cat1open .pic p, #trabalho .catopen-wrap .cat2open .pic p, #trabalho .catopen-wrap .cat3open .pic p, #trabalho .catopen-wrap .cat4open .pic p, #trabalho .catopen-wrap .cat5open .pic p {
+#trabalho .catopen-wrap .cat1open .pic-wrap .pic img, #trabalho .catopen-wrap .cat2open .pic-wrap .pic img, #trabalho .catopen-wrap .cat3open .pic-wrap .pic img, #trabalho .catopen-wrap .cat4open .pic-wrap .pic img, #trabalho .catopen-wrap .cat5open .pic-wrap .pic img {
+  max-width: 100%;
+}
+
+#trabalho .catopen-wrap .cat1open .pic-wrap .pic p, #trabalho .catopen-wrap .cat2open .pic-wrap .pic p, #trabalho .catopen-wrap .cat3open .pic-wrap .pic p, #trabalho .catopen-wrap .cat4open .pic-wrap .pic p, #trabalho .catopen-wrap .cat5open .pic-wrap .pic p {
   display: none;
 }
 
-#trabalho .catopen-wrap .cat1open .pic:hover, #trabalho .catopen-wrap .cat2open .pic:hover, #trabalho .catopen-wrap .cat3open .pic:hover, #trabalho .catopen-wrap .cat4open .pic:hover, #trabalho .catopen-wrap .cat5open .pic:hover {
+#trabalho .catopen-wrap .cat1open .pic-wrap .pic:hover, #trabalho .catopen-wrap .cat2open .pic-wrap .pic:hover, #trabalho .catopen-wrap .cat3open .pic-wrap .pic:hover, #trabalho .catopen-wrap .cat4open .pic-wrap .pic:hover, #trabalho .catopen-wrap .cat5open .pic-wrap .pic:hover {
   box-shadow: 0 0 0 10px white, 0 0 0 11px rgba(0, 0, 0, 0.2), 0px 0px 2px 13px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -566,8 +574,17 @@ hr {
 }
 
 #myModal .modal-body p {
+  margin: 20px auto;
+  padding: 30px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.5;
   text-align: justify;
-  padding: 20px;
+}
+
+#myModal .modal-body p br {
+  line-height: 2.5;
 }
 
 #contacto {
@@ -850,6 +867,12 @@ hr {
   .menu ul li {
     padding: 0 25px;
   }
+  #trabalho .catopen-wrap .cat1open .catDesc-wrap, #trabalho .catopen-wrap .cat2open .catDesc-wrap, #trabalho .catopen-wrap .cat3open .catDesc-wrap, #trabalho .catopen-wrap .cat4open .catDesc-wrap, #trabalho .catopen-wrap .cat5open .catDesc-wrap {
+    width: 100%;
+  }
+  #trabalho .catopen-wrap .cat1open .pic-wrap, #trabalho .catopen-wrap .cat2open .pic-wrap, #trabalho .catopen-wrap .cat3open .pic-wrap, #trabalho .catopen-wrap .cat4open .pic-wrap, #trabalho .catopen-wrap .cat5open .pic-wrap {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1040px) {
@@ -877,6 +900,9 @@ hr {
   .menu .left li {
     padding: 0 25px;
   }
+  #sobre .picwindow1, #sobre .picwindow2 {
+    background-attachment: initial;
+  }
   #contacto .contact-form {
     width: 70%;
   }
@@ -895,9 +921,6 @@ hr {
   .menu .left li {
     padding: 0 5px;
   }
-  #sobre .picwindow1, #sobre .picwindow2 {
-    background-attachment: initial;
-  }
   #trabalho .categorias .cat1, #trabalho .categorias .cat2 {
     width: 50%;
   }
@@ -908,6 +931,12 @@ hr {
     width: 100%;
     margin-bottom: 100px;
   }
+  #trabalho .categorias .cat1 .overlay, #trabalho .categorias .cat2 .overlay, #trabalho .categorias .cat3 .overlay, #trabalho .categorias .cat4 .overlay, #trabalho .categorias .cat5 .overlay {
+    top: 75% !important;
+  }
+  #trabalho .categorias .cat1:hover .overlay, #trabalho .categorias .cat2:hover .overlay, #trabalho .categorias .cat3:hover .overlay, #trabalho .categorias .cat4:hover .overlay, #trabalho .categorias .cat5:hover .overlay {
+    background-color: rgba(204, 204, 156, 0.5);
+  }
 }
 
 @media (max-width: 740px) {
@@ -916,6 +945,20 @@ hr {
   }
   .mobile {
     display: block;
+  }
+  #trabalho .catopen-wrap .cat1open .catDesc-wrap, #trabalho .catopen-wrap .cat2open .catDesc-wrap, #trabalho .catopen-wrap .cat3open .catDesc-wrap, #trabalho .catopen-wrap .cat4open .catDesc-wrap, #trabalho .catopen-wrap .cat5open .catDesc-wrap {
+    width: 100%;
+  }
+  #trabalho .catopen-wrap .cat1open .pic-wrap, #trabalho .catopen-wrap .cat2open .pic-wrap, #trabalho .catopen-wrap .cat3open .pic-wrap, #trabalho .catopen-wrap .cat4open .pic-wrap, #trabalho .catopen-wrap .cat5open .pic-wrap {
+    width: 100%;
+  }
+  #trabalho .catopen-wrap .cat1open .pic-wrap .pic, #trabalho .catopen-wrap .cat2open .pic-wrap .pic, #trabalho .catopen-wrap .cat3open .pic-wrap .pic, #trabalho .catopen-wrap .cat4open .pic-wrap .pic, #trabalho .catopen-wrap .cat5open .pic-wrap .pic {
+    width: 100px;
+    height: 100px;
+    margin: 30px 20px;
+  }
+  #trabalho .catopen-wrap .closeBtn {
+    right: 10%;
   }
   #contacto .contact-wrap span {
     padding: 0px 10px;
@@ -946,8 +989,20 @@ hr {
     width: 300px;
     border: 4px solid rgba(255, 255, 255, 0.9);
   }
-  #sobre h1, #trabalho h1 {
+  #sobre h1, #trabalho h1, #contacto h1 {
     font-size: 32px;
+  }
+  #trabalho .catopen-wrap .cat1open .catDesc-wrap h1, #trabalho .catopen-wrap .cat2open .catDesc-wrap h1, #trabalho .catopen-wrap .cat3open .catDesc-wrap h1, #trabalho .catopen-wrap .cat4open .catDesc-wrap h1, #trabalho .catopen-wrap .cat5open .catDesc-wrap h1 {
+    font-size: 32px;
+  }
+  #trabalho .catopen-wrap .cat1open .catDesc-wrap p, #trabalho .catopen-wrap .cat2open .catDesc-wrap p, #trabalho .catopen-wrap .cat3open .catDesc-wrap p, #trabalho .catopen-wrap .cat4open .catDesc-wrap p, #trabalho .catopen-wrap .cat5open .catDesc-wrap p {
+    font-size: 14px;
+  }
+  #trabalho .catopen-wrap .closeBtn {
+    top: 9px;
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
   }
   #sobre .sobre-wrap {
     display: block;
@@ -962,6 +1017,9 @@ hr {
   }
   #trabalho .intro p {
     font-size: 14px;
+  }
+  #trabalho .catopen-wrap .closeBtn {
+    right: 5%;
   }
   #contacto .contact-wrap a {
     margin: 0px;

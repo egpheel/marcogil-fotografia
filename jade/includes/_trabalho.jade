@@ -9,7 +9,7 @@
         p É a minha visão sobre o mundo. São Pessoas, Paisagens, Perspectivas que são as minhas, a vida à luz do dia ou da noite e cidades que percorro com a mesma intensidade que as vivo. Tudo em fotografias que contam histórias ou estórias de um quotidiano que é o de todos ou o meu.
     .col-md-1
   
-  .categorias#catsClosed
+  .categorias
     .cat1
       .overlay
         strong #{cat1}
@@ -38,22 +38,20 @@
       .catDesc-wrap
         h1 #{cat2}
         p Com ou sem horizonte, é aqui que podemos ser felizes se nos resignarmos apenas a olhar.
-        | <?php galleryCat('cat2'); ?>
     .cat3open
       .catDesc-wrap
         h1 #{cat3}
         p É como caçar constelações. Ou fazer acordar o mundo das estrelas, dar luz ao silêncio e aproveitar uma galáxia de cores que se aproxima com o nascer do dia ou o cair da noite.
+      .pic-wrap
         | <?php galleryCat('cat3'); ?>
     .cat4open
       .catDesc-wrap
         h1 #{cat4}
         p A história das cidades do mundo em geral é longa, pelo que decidi fazê-la de instantes. São lapsos de um quotidiano urbano à luz do dia ou da noite.
-        | <?php galleryCat('cat4'); ?>
     .cat5open
       .catDesc-wrap
         h1 #{cat5}
         p Uma forma diferente e própria de ver o mundo, repleta de detalhes ou sem eles.
-        | <?php galleryCat('cat5'); ?>
   
   .modal.fade#myModal(tabindex='-1', role='dialog', aria-labelledby='modalLabel')
     .modal-dialog.modal-lg
