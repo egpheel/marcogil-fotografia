@@ -134,12 +134,14 @@
             <h1>Pessoas</h1>
             <p>Despir-lhes a alma, ler-lhes o rosto, fotografar pessoas é como intervalar vidas por instantes ou perpetuar memórias.</p>
           </div>
+          <div class="pic-wrap"><?php galleryCat('cat1'); ?></div>
         </div>
         <div class="cat2open">
           <div class="catDesc-wrap">
             <h1>Paisagens</h1>
             <p>Com ou sem horizonte, é aqui que podemos ser felizes se nos resignarmos apenas a olhar.</p>
           </div>
+          <div class="pic-wrap"><?php galleryCat('cat2'); ?></div>
         </div>
         <div class="cat3open">
           <div class="catDesc-wrap">
@@ -153,12 +155,14 @@
             <h1>Cidades</h1>
             <p>A história das cidades do mundo em geral é longa, pelo que decidi fazê-la de instantes. São lapsos de um quotidiano urbano à luz do dia ou da noite.</p>
           </div>
+          <div class="pic-wrap"><?php galleryCat('cat4'); ?></div>
         </div>
         <div class="cat5open">
           <div class="catDesc-wrap">
             <h1>Perspectivas</h1>
             <p>Uma forma diferente e própria de ver o mundo, repleta de detalhes ou sem eles.</p>
           </div>
+          <div class="pic-wrap"><?php galleryCat('cat5'); ?></div>
         </div>
       </div>
       <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" class="modal fade">

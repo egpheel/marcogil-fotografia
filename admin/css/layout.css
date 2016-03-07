@@ -1,0 +1,33 @@
+html, body {
+  font-size: 16px;
+}
+
+#upload {
+  margin: 20px;
+}
+
+#upload form .form-group .radio p {
+  margin-bottom: 0;
+}
+
+#upload form .left, #upload form .right {
+  display: inline-block;
+  width: 40%;
+}
+
+#upload form .right textarea {
+  margin: 50px auto 0;
+}
+
+#upload label {
+  margin: 20px 0 0;
+}
+
+#upload #fileToUpload, #upload #thumbToUpload {
+  margin: 5px 20px;
+}
+
+#upload .btn {
+  margin: 20px auto;
+  display: block;
+}

@@ -16,30 +16,37 @@
     <title>Marco Gil - Painel de administração</title>
   </head>
   <body>
-    <form action="php-resources/upload.php" method="post" enctype="multipart/form-data">
-      <div class="form-group">
-        <div class="radio">
-          <p>Categorias:</p>
-          <label class="radio-inline">
-            <input id="cat1" type="radio" value="cat1" name="categories">Pessoas
-          </label>
-          <label class="radio-inline">
-            <input id="cat2" type="radio" value="cat2" name="categories">Paisagens
-          </label>
-          <label class="radio-inline">
-            <input id="cat3" type="radio" value="cat3" name="categories">Nocturnas
-          </label>
-          <label class="radio-inline">
-            <input id="cat4" type="radio" value="cat4" name="categories">Cidades
-          </label>
-          <label class="radio-inline">
-            <input id="cat5" type="radio" value="cat5" name="categories">Perspectivas
-          </label>
+    <div id="upload">
+      <form action="php-resources/upload.php" method="post" enctype="multipart/form-data">
+        <div class="form-group left">
+          <div class="radio">
+            <p>Categorias:</p>
+            <label class="radio-inline">
+              <input id="cat1" type="radio" value="cat1" name="categories">Pessoas
+            </label>
+            <label class="radio-inline">
+              <input id="cat2" type="radio" value="cat2" name="categories">Paisagens
+            </label>
+            <label class="radio-inline">
+              <input id="cat3" type="radio" value="cat3" name="categories">Nocturnas
+            </label>
+            <label class="radio-inline">
+              <input id="cat4" type="radio" value="cat4" name="categories">Cidades
+            </label>
+            <label class="radio-inline">
+              <input id="cat5" type="radio" value="cat5" name="categories">Perspectivas
+            </label>
+          </div>
+          <label for="#fileToUpload">Escolha a imagem:</label>
+          <input id="fileToUpload" type="file" name="fileToUpload" accept="image/gif, image/jpeg, image/png">
+          <label for="#thumbToUpload">Escolha o thumbnail:</label>
+          <input id="thumbToUpload" type="file" name="thumbToUpload" accept="image/gif, image/jpeg, image/png">
         </div>
-        <label for="#fileToUpload">Escolha a imagem:</label>
-        <input id="fileToUpload" type="file" name="fileToUpload" accept="image/gif, image/jpeg, image/png">
-      </div>
-      <input type="submit" value="Enviar" name="submit" class="btn btn-default">
-    </form>
+        <div class="form-group right">
+          <textarea rows="6" placeholder="Descrição" name="texto" class="form-control texto"></textarea>
+        </div>
+        <input type="submit" value="Enviar" name="submit" class="btn btn-default btn-lg">
+      </form>
+    </div>
   </body>
 </html>
