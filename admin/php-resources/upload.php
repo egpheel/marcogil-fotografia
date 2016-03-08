@@ -20,8 +20,6 @@
       }
   }
 
-  $text = $_POST["texto"] . "\r\n";
-
   $target_dir = "../../img/cats/". $cat ."/";
   $foto = $target_dir . basename($_FILES["fileToUpload"]["name"]);
   $imageFileType = pathinfo($foto,PATHINFO_EXTENSION);
@@ -33,7 +31,7 @@
   $ext  = array_pop($temp);
   $pic_name = implode('.', $temp);
 
-  $text = $pic_name . ": " . $_POST["texto"] . "\r\n";
+  $text = $pic_name . ": " . str_replace("\n", "<br />", $_POST["texto"]) . "\r\n";
   $loc = $pic_name . ": " . $_POST["loc"] . "\r\n";
 
   $target_dir = "../../img/cats/". $cat ."/thumbs/";

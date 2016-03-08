@@ -1,6 +1,8 @@
 function preview(text) {
+  var preview;
   $(text).on('keyup', function() {
-    $('.previewZone').html($(text).val());
+    preview = $(text).val().replace(/\n/g, '<br />');
+    $('.previewZone').html(preview);
   });
 };
 
