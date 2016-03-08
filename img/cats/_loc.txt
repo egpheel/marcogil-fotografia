@@ -1,4 +1,6 @@
 # INFO FEED FILE
+001: Lisboa, Portugal
+002: Lisboa, Portugal
 807: Aldeia de São Francisco de Assis, Portugal
 820: Aldeia de São Francisco de Assis, Portugal
 832: Cabeço do Pião, Portugal
@@ -11,6 +13,7 @@
 961: Amesterdão, Holanda
 972: Amesterdão, Holanda
 977: Amesterdão, Holanda
+1002: Amesterdão, Holanda
 1005: Amesterdão, Holanda
 1056: Amesterdão, Holanda
 1063: Aldeia de São Francisco de Assis, Portugal
