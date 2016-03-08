@@ -3,6 +3,13 @@ html, body {
   font-size: 16px;
 }
 
+html hr, body hr {
+  border: 0px;
+  height: 1px;
+  background: lightgray;
+  width: 75%;
+}
+
 #upload {
   margin: 20px;
 }
@@ -54,4 +61,31 @@ html, body {
 
 #upload .previewZone br {
   line-height: 2.5;
+}
+
+#delete {
+  margin: 20px;
+}
+
+#delete .sel-wrap {
+  width: 200px;
+}
+
+#delete .results .pic-wrap {
+  display: inline-block;
+  text-align: center;
+  margin: 20px 10px;
+}
+
+#delete .results .pic-wrap img {
+  margin: 10px 20px 0;
+  max-width: 100px;
+}
+
+#delete .results .pic-wrap p {
+  text-align: center;
+}
+
+#delete .results .pic-wrap #delBtn {
+  max-width: 100px;
 }

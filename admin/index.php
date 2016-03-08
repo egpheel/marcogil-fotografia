@@ -17,6 +17,7 @@
   </head>
   <body>
     <div id="upload">
+      <h1>Adicionar</h1>
       <form action="php-resources/upload.php" method="post" enctype="multipart/form-data">
         <div class="form-group left">
           <div class="radio">
@@ -49,6 +50,24 @@
         <input type="submit" value="Enviar" name="submit" class="btn btn-default btn-lg">
       </form>
       <div class="previewZone"></div>
+      <hr>
+    </div>
+    <div id="delete">
+      <h1>Apagar</h1>
+      <div class="sel-wrap">
+        <div class="form-group">
+          <label for="catsel">Categoria</label>
+          <select id="catsel" class="form-control">
+            <option value="cat1">Pessoas</option>
+            <option value="cat2">Paisagens</option>
+            <option value="cat3">Nocturnas</option>
+            <option value="cat4">Cidades</option>
+            <option value="cat5">Perspectivas</option>
+          </select>
+        </div>
+      </div>
+      <div class="deleted"></div>
+      <div class="results"></div>
     </div>
   </body>
 </html>

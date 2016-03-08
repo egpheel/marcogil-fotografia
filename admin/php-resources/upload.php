@@ -50,63 +50,51 @@
     fclose($file);
   }
 
-  writeFile($desc_file, $text);
-  writeFile($loc_file, $loc);
-
   if (basename($_FILES["fileToUpload"]["name"]) != basename($_FILES["thumbToUpload"]["name"])) {
-    echo "O ficheiro e o thumbnail têm de ter o mesmo nome.";
-    echo "<br /><a href='../'>Voltar</a>";
+    echo "O ficheiro e o thumbnail têm de ter o mesmo nome.<br />";
     $uploadOk = 0;
   }
 
   if (file_exists($foto)) {
-      echo "O ficheiro já existe.";
-      echo "<br />";
+      echo "O ficheiro já existe.<br />";
       $uploadOk = 0;
   }
 
   if ($_FILES["fileToUpload"]["size"] > 1000000) {
-      echo "O ficheiro é demasiado grande.";
-      echo "<br />";
+      echo "O ficheiro é demasiado grande.<br />";
       $uploadOk = 0;
   }
 
   if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
   && $imageFileType != "gif" ) {
-      echo "Apenas ficheiros JPG, JPEG, PNG & GIF são permitidos.";
-      echo "<br />";
+      echo "Apenas ficheiros JPG, JPEG, PNG & GIF são permitidos.<br />";
       $uploadOk = 0;
   }
 
   if ($uploadOk == 0) {
-      echo "O ficheiro não foi enviado.";
-      echo "<br />";
+      echo "O ficheiro não foi enviado.<br />";
   } else {
       if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $foto)) {
-          echo "O ficheiro ". basename( $_FILES["fileToUpload"]["name"]). " foi enviado com sucesso.";
-          echo "<br />";
+          echo "O ficheiro ". basename( $_FILES["fileToUpload"]["name"]). " foi enviado com sucesso.<br />";
+          writeFile($desc_file, $text);
       } else {
-          echo "Ocorreu um erro no envio do ficheiro.";
-          echo "<br />";
+          echo "Ocorreu um erro no envio do ficheiro.<br />";
       }
   }
 
   if (file_exists($thumbnail)) {
-      echo "O thumbnail já existe.";
-      echo "<br /><a href='../'>Voltar</a>";
+      echo "O thumbnail já existe.<br />";
       $uploadOk = 0;
   }
 
   if ($_FILES["thumbToUpload"]["size"] > 1000000) {
-      echo "O thumbnail é demasiado grande.";
-      echo "<br /><a href='../'>Voltar</a>";
+      echo "O thumbnail é demasiado grande.<br />";
       $uploadOk = 0;
   }
 
   if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
   && $imageFileType != "gif" ) {
-      echo "Apenas thumbnails com formato JPG, JPEG, PNG & GIF são permitidos.";
-      echo "<br /><a href='../'>Voltar</a>";
+      echo "Apenas thumbnails com formato JPG, JPEG, PNG & GIF são permitidos.<br />";
       $uploadOk = 0;
   }
 
@@ -117,6 +105,7 @@
       if (move_uploaded_file($_FILES["thumbToUpload"]["tmp_name"], $thumbnail)) {
           echo "O thumbnail ". basename( $_FILES["thumbToUpload"]["name"]). " foi enviado com sucesso.";
           echo "<br /><a href='../'>Voltar</a>";
+          writeFile($loc_file, $loc);
       } else {
           echo "Ocorreu um erro no envio do thumbnail.";
           echo "<br /><a href='../'>Voltar</a>";
