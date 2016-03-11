@@ -21,8 +21,8 @@ function getSel(select, destElement) {
   });
 };
 
-function del(btn, destElement, select, refresh) {
-  $('body').on('click', btn, function(e) {
+function del(button, destElement, select, refresh) {
+  $('body').on('click', button, function(e) {
     var pic = $(e.target).parent().attr('id');
     var cat = $(select + ' option:selected').val();
     $(destElement).load('./php-resources/delete.php?d=' + pic + '&c=' + cat);
@@ -32,7 +32,7 @@ function del(btn, destElement, select, refresh) {
 
     var refreshPics = setTimeout(function() {
       getSel(select, refresh);
-    }, 1500);
+    }, 1000);
   });
 };
 

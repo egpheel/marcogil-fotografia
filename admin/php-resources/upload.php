@@ -1,5 +1,4 @@
 <?php
-  //fotografia
   $uploadOk = 1;
 
   if(isset($_POST["submit"])) {
