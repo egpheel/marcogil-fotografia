@@ -629,13 +629,6 @@ hr {
   bottom: 15px;
 }
 
-@-moz-document url-prefix() {
-  #myModal .modal-body .desc br {
-    display: block;
-    margin-top: 15px;
-  }
-}
-
 #contacto {
   text-align: center;
   padding-top: 100px;
