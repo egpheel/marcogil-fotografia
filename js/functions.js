@@ -2,6 +2,9 @@ var isNavbarShowing = false;
 var currentCat;
 var currentCatPrefix;
 var galleryOpen = false;
+var picOpen;
+var totalPics;
+var category;
 
 $(window).scroll(function() {
   var wScroll = $(this).scrollTop();
@@ -157,9 +160,13 @@ $(function() {
   $('.pic').click(function() {
     var picture = $('img', this).attr('src');
     var parent = $(this).parent();
-    var title = $('.catDesc-wrap h1', parent).html();
+    var title = $('.catDesc-wrap h1', parent.parent()).html();
     var loc = $('.loc', this).html();
     var desc = $('.desc', this).html();
+
+    picOpen = $(this).index();
+    totalPics = $('.pic', parent).length - 1;
+    category = '.' + parent.parent().attr('class');
 
     picture = picture.replace('/thumbs/', '/');
 
@@ -167,8 +174,92 @@ $(function() {
     $('.modal-body > img').attr('src', picture);
     $('.modal-body > .loc').html(loc);
     $('.modal-body > .desc').html(desc);
+
+    if (totalPics === 0) {
+      $('.modal-footer .next').hide();
+      $('.modal-footer .previous').hide();
+    } else if ($(this).is(':first-child')) {
+      $('.modal-footer .previous').hide();
+      $('.modal-footer .next').show();
+    } else if ($(this).is(':last-child')) {
+      $('.modal-footer .next').hide();
+      $('.modal-footer .previous').show();
+    } else {
+      $('.modal-footer .previous').show();
+      $('.modal-footer .next').show();
+    }
+  });
+
+  $('#myModal .modal-footer .previous').click(function() {
+    previous(picOpen, category);
+    picOpen -= 1;
+    if (picOpen <= 0) {
+      $('#myModal .modal-footer .previous').hide();
+    };
+  });
+
+  $('#myModal .modal-footer .next').click(function() {
+    next(picOpen, category);
+    picOpen += 1;
+    if (picOpen >= totalPics) {
+      $('#myModal .modal-footer .next').hide();
+    };
   });
 });
+
+function previous(currIndex, cat) {
+  var picture = $('img', $(cat + ' .pic').eq(currIndex - 1)).attr('src');
+  var loc = $('.loc', $(cat + ' .pic').eq(currIndex - 1)).html();
+  var desc = $('.desc', $(cat + ' .pic').eq(currIndex - 1)).html();
+
+  picture = picture.replace('/thumbs/', '/');
+
+  $('.modal-body > img').fadeOut(function() {
+    $(this).hide();
+    $(this).attr('src', picture);
+    $(this).fadeIn();
+  });
+  $('.modal-body > .loc').fadeOut(function() {
+    $(this).hide();
+    $(this).html(loc);
+    $(this).fadeIn();
+  });
+  $('.modal-body > .desc').fadeOut(function() {
+    $(this).hide();
+    $(this).html(desc);
+    $(this).fadeIn();
+  });
+
+  $('#myModal .modal-footer .next').show();
+  $('#myModal').animate({ scrollTop: 0 }, 'slow');
+};
+
+function next(currIndex, cat) {
+  var picture = $('img', $(cat + ' .pic').eq(currIndex + 1)).attr('src');
+  var loc = $('.loc', $(cat + ' .pic').eq(currIndex + 1)).html();
+  var desc = $('.desc', $(cat + ' .pic').eq(currIndex + 1)).html();
+
+  picture = picture.replace('/thumbs/', '/');
+
+  $('.modal-body > img').fadeOut(function() {
+    $(this).hide();
+    $(this).attr('src', picture);
+    $(this).fadeIn();
+  });
+  $('.modal-body > .loc').fadeOut(function() {
+    $(this).hide();
+    $(this).html(loc);
+    $(this).fadeIn();
+  });
+  $('.modal-body > .desc').fadeOut(function() {
+    $(this).hide();
+    $(this).html(desc);
+    $(this).fadeIn();
+  });
+
+  $('#myModal .modal-footer .previous').show();
+  $('#myModal').animate({ scrollTop: 0 }, 'slow');
+};
 
 function changeHero() {
   var interval = 5000; //8secs

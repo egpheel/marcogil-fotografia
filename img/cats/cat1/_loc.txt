@@ -1,1 +1,86 @@
-# INFO FEED FILE
+# INFO FEED FILE
+456: Aldeia de São Francisco de Assis, Portugal
+597: Aldeia de São Francisco de Assis, Portugal
+728: Salzburgo, Áustria
+732: Munique, Alemanha
+813: Fundão, Portugal 
+817: Zurique, Suiça
+847: Piódão, Portugal 
+847: Piódão, Portugal
+853: Salzburgo, Áustria
+858: Aldeia de São Francisco de Assis, Portugal
+893: Zurique, Suiça
+928: Aldeia de São Francisco de Assis, Portugal
+946: Amesterdão, Holanda
+950: Amesterdão, Holanda
+953: Amesterdão, Holanda
+959: Amesterdão, Holanda
+962: Amesterdão, Holanda
+963: Amesterdão, Holanda
+964: Amesterdão, Holanda
+974: Amesterdão, Holanda
+982: Amesterdão, Holanda
+992: Amesterdão, Holanda
+1009: Amesterdão, Holanda
+1010: Amesterdão, Holanda
+1032: Amesterdão, Holanda
+967: Amesterdão, Holanda
+1034: Amesterdão, Holanda
+1069: Pampilhosa da Serra, Portugal 
+1078: Amesterdão, Holanda
+1145: Amesterdão, Holanda
+1157: Amesterdão, Holanda
+1209: Serra da Estrela, Portugal 
+1262: Amesterdão, Holanda
+1271: Amesterdão, Holanda
+1289: Amesterdão, Holanda
+1298: Amesterdão, Holanda
+1213: Amesterdão, Holanda
+1307: Eindhoven, Holanda
+1320: Paris, França 
+1323: Paris, França 
+1329: Paris, França 
+1333: Paris, França 
+1342: Paris, França 
+1344: Paris, França 
+1345: Paris, França 
+1346: Paris, França 
+1351: Paris, França 
+1355: Paris, França 
+1357: Paris, França 
+1364: Paris, França 
+1384: Paris, França 
+1390: Paris, França 
+1392: Paris, França 
+1418: Paris, França 
+1421: Paris, França 
+1423: Paris, França 
+1426: Amesterdão, Holanda
+1449: Paris, França 
+1462: Paris, França 
+2548: Porto, Portugal 
+2505: Aldeia de São Francisco de Assis, Portugal
+2241: Aldeia de São Francisco de Assis, Portugal
+2412: Lisboa, Portugal 
+2131: Lisboa, Portugal 
+1857: Paris, França 
+1891: Paris, França 
+1905: Paris, França 
+1906: Paris, França 
+1913: Amesterdão, Holanda
+1915: Lisboa, Portugal 
+1923: Lisboa, Portugal 
+1932: Lisboa, Portugal 
+1933: Lisboa, Portugal 
+1934: Lisboa, Portugal 
+1937: Lisboa, Portugal 
+1944: Lisboa, Portugal 
+1948: Lisboa, Portugal 
+1968: Paris, França 
+1929: Lisboa, Portugal 
+1972: Paris, França 
+1984: Lisboa, Portugal 
+1999: Lisboa, Portugal 
+2014: Lisboa, Portugal 
+2016: Lisboa, Portugal 
+2025: Lisboa, Portugal 

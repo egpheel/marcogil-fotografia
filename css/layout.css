@@ -609,6 +609,26 @@ hr {
   line-height: 2.5;
 }
 
+#myModal .modal-footer {
+  text-align: center;
+}
+
+#myModal .modal-footer .previous, #myModal .modal-footer .next {
+  display: none;
+}
+
+#myModal .modal-footer .previous {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+}
+
+#myModal .modal-footer .next {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+
 #contacto {
   text-align: center;
   padding-top: 100px;

@@ -177,7 +177,9 @@
               <p class="desc"></p>
             </div>
             <div class="modal-footer">
+              <button type="button" class="btn btn-default previous"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></button>
               <button type="button" data-dismiss="modal" class="btn btn-default">Fechar</button>
+              <button type="button" class="btn btn-default next"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></button>
             </div>
           </div>
         </div>
