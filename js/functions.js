@@ -214,17 +214,17 @@ function previous(currIndex, cat) {
 
   picture = picture.replace('/thumbs/', '/');
 
-  $('.modal-body > img').fadeOut(function() {
+  $('.modal-body > img').fadeOut(1000, function() {
     $(this).hide();
     $(this).attr('src', picture);
     $(this).fadeIn();
   });
-  $('.modal-body > .loc').fadeOut(function() {
+  $('.modal-body > .loc').fadeOut(1000, function() {
     $(this).hide();
     $(this).html(loc);
     $(this).fadeIn();
   });
-  $('.modal-body > .desc').fadeOut(function() {
+  $('.modal-body > .desc').fadeOut(1000, function() {
     $(this).hide();
     $(this).html(desc);
     $(this).fadeIn();
@@ -241,17 +241,17 @@ function next(currIndex, cat) {
 
   picture = picture.replace('/thumbs/', '/');
 
-  $('.modal-body > img').fadeOut(function() {
+  $('.modal-body > img').fadeOut(1000, function() {
     $(this).hide();
     $(this).attr('src', picture);
     $(this).fadeIn();
   });
-  $('.modal-body > .loc').fadeOut(function() {
+  $('.modal-body > .loc').fadeOut(1000, function() {
     $(this).hide();
     $(this).html(loc);
     $(this).fadeIn();
   });
-  $('.modal-body > .desc').fadeOut(function() {
+  $('.modal-body > .desc').fadeOut(1000, function() {
     $(this).hide();
     $(this).html(desc);
     $(this).fadeIn();

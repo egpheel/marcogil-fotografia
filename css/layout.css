@@ -606,7 +606,9 @@ hr {
 }
 
 #myModal .modal-body .desc br {
-  line-height: 2.5;
+  display: block;
+  margin-top: 20px;
+  content: ' ';
 }
 
 #myModal .modal-footer {
