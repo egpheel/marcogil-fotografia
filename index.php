@@ -200,7 +200,7 @@
           <div class="messageError">
             <p><strong>Erro!</strong> Todos os campos devem ser preenchidos.</p>
           </div>
-          <button type="submit" name="submit" class="btn btn-primary btn-lg">Enviar</button>
+          <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
         </form>
       </div>
     </div>
