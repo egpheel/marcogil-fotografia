@@ -883,11 +883,15 @@ hr {
   text-align: center;
 }
 
-#footer .copyright-wrap a {
+#footer .copyright-wrap p {
+  display: inline-block;
+}
+
+#footer .copyright-wrap p a {
   color: rgba(255, 255, 255, 0.3);
 }
 
-#footer .copyright-wrap a:hover {
+#footer .copyright-wrap p a:hover {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
 }

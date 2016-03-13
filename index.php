@@ -221,7 +221,8 @@
         <p>+351 964 297 582</p>
       </div>
       <div class="copyright-wrap">
-        <p>&copy; 2016 Marco Gil. Todos os direitos reservados. Website por <a href="#">Eduardo Gil</a></p>
+        <p>&copy; 2016 Marco Gil. Todos os direitos reservados.</p>
+        <p>Website por <a href="#">Eduardo Gil</a></p>
       </div>
     </div>
   </body>
