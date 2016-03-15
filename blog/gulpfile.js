@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-jade');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -12,5 +14,14 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass('layout.sass', 'public/css/layout.css');
+    mix.jade({
+      search: '/*/*.jade',
+      dest: '/views/',
+      src: '/assets/jade/'
+    });
+    mix.browserSync({
+      proxy: 'localhost:8000',
+      notify: false
+    });
 });
