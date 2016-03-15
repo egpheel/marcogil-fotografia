@@ -55,7 +55,7 @@ hr {
   height: 1px;
   background: rgba(150, 150, 150, 0.4);
   width: 50%;
-  margin-bottom: 50px; }
+  margin: 30px auto 50px; }
 
 .row {
   margin-left: 0;
@@ -69,62 +69,6 @@ hr {
     font-size: 96px; }
   .header p {
     margin: 0 auto 50px; }
-
-.showNavbar {
-  font-family: "Cabin", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
-  .showNavbar ul {
-    list-style-type: none;
-    margin: -110px 50px 0px;
-    padding: 0;
-    overflow: hidden; }
-    .showNavbar ul li {
-      text-align: center;
-      display: inline-block;
-      padding: 0 40px; }
-      .showNavbar ul li a {
-        display: inline-block;
-        color: rgba(0, 0, 0, 0.6);
-        padding: 14px 16px;
-        text-decoration: none;
-        text-align: center;
-        transition: 0.3s ease-in-out; }
-        .showNavbar ul li a:hover {
-          background-color: rgba(0, 0, 0, 0.1);
-          transition: 0.3s ease-in-out; }
-  .showNavbar .left {
-    float: left; }
-  .showNavbar .right {
-    float: right; }
-
-.showNavbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 9999;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }
-  .showNavbar ul {
-    margin-top: 0px; }
-    .showNavbar ul li {
-      padding: 0; }
-      .showNavbar ul li img {
-        display: inline-block;
-        margin: 8px 10px;
-        max-height: 32px; }
-      .showNavbar ul li p {
-        display: inline-block;
-        color: rgba(0, 0, 0, 0.6);
-        position: absolute;
-        top: 14px;
-        left: 120px;
-        cursor: default; }
-  .showNavbar .left a {
-    padding: 0; }
 
 #content .featured {
   background: rgba(227, 224, 208, 0.7);
@@ -151,7 +95,13 @@ hr {
   border-left: 1px solid rgba(150, 150, 150, 0.4);
   padding: 20px 30px; }
   #content .sidebar .most-recent, #content .sidebar .categories {
-    margin: 20px 0 30px; }
+    margin: 20px 0 50px; }
+
+#content .form-wrap textarea {
+  margin: 15px 0; }
+
+#content .form-wrap .btn {
+  margin-bottom: 100px; }
 
 #footer {
   position: relative;
