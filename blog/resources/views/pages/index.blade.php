@@ -9,6 +9,10 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!--parsleyjs-->
+    <script src="/js/parsley/parsley.js"></script>
+    <script src="/js/parsley/pt-pt.js"></script>
+    <link rel="stylesheet" href="/css/parsley.css">
     <!--my CSS-->
     <link rel="stylesheet" href="/css/layout.css">
     <title>Marco Gil - Blog</title>
@@ -17,6 +21,15 @@
     <div class="header">
       <h1>Marco Gil</h1>
       <p><em>frase bastante sexy sobre cenas e viagens e assim</em></p>
+    </div>
+    <div class="container">@if (Session::has('success'))
+      <div role="alert" class="alert alert-success"><strong>Successo: </strong>{{ Session::get('success') }}</div>@endif
+      @if (count($errors) > 0)
+      <div role="alert" class="alert alert-danger"><strong>Erros:</strong>
+        <ul>@foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>@endforeach
+        </ul>
+      </div>@endif
     </div>
     <div id="content">
       <div class="row">
@@ -64,7 +77,6 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="vr"></div>
           <div class="sidebar">
             <div class="most-recent">
               <h4>Mais recentes</h4>
@@ -87,5 +99,6 @@
         </div>
       </div>
     </div>
+    <div id="footer"></div>
   </body>
 </html>

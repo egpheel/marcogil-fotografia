@@ -4,10 +4,13 @@ html(lang='en')
   include _head
 
   body
-    block header
+    include _header
     
     block navbar
     
+    .container
+      include _messages
+    
     block content
     
-    block footer
+    include _footer

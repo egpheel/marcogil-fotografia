@@ -31,22 +31,41 @@
         </ul>
       </div>@endif
     </div>
-    <div id="create">
+    <div id="content">
       <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center">Criar nova publicação</h1>
-          <hr>
+        <div class="container">
+          <div class="col-md-10">
+            <h1>Todas as publicações</h1>
+          </div>
+          <div class="col-md-2"><a href="{{ route('posts.create') }}" class="margin-top-20 btn btn-lg btn-primary">Nova publicação</a></div>
         </div>
-        <div class="col-md-6 col-md-offset-3">
-          <div class="form-wrap">
-            {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '')) !!}
-            {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Título', 'required' => '', 'maxlength' => '255')) }}
-            {{ Form::textarea('body', null, array('class'=> 'form-control', 'placeholder' => 'Publicação', 'required' => '')) }}
-            {{ Form::submit('Publicar', array('class' => 'btn btn-lg btn-block btn-success')) }}
-            {!! Form::close() !!}
+      </div>
+      <hr>
+      <div class="row">
+        <div class="container">
+          <div class="col-md-12">
+            <table class="table">
+              <thead>
+                <th>#</th>
+                <th>Título</th>
+                <th>Publicação</th>
+                <th>Criada em</th>
+                <th> </th>
+              </thead>
+              <tbody>@foreach ($posts as $post)
+                <tr>
+                  <th>{{ $post->id }}</th>
+                  <td>{{ $post->title }}</td>
+                  <td>{{ substr($post->body, 0, 50) }}{{ strlen($post->body)>50 ? '...' : '' }}</td>
+                  <td>{{ date('d M Y \à\s H:i', strtotime($post->created_at)) }}</td>
+                  <td> <a href="{{ route('posts.show', $post->id) }}" class="btn btn-default">Ver</a> <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-default">Editar</a></td>
+                </tr>@endforeach
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
+      <hr>
     </div>
     <div id="footer"></div>
   </body>

@@ -17,24 +17,46 @@
         family: $primary-font
 
   .posts-wrap
+    margin: 0 0 100px
     .post
       margin: 30px 50px
       text-align: justify
+
+      h1
+        margin: 0 0 15px
+        font:
+          size: 48px
+        color: $heading
+
+      p
+        color: $paragraph
 
       .criado-por
         font-size: 14px
         text-align: right
 
   .sidebar
-    margin: 0
-    border-left: 1px solid $hr-color
+    margin: 30px 0 0
+    border-left: 1px solid $vr-color
     padding: 20px 30px
 
     .most-recent, .categories
       margin: 20px 0 50px
 
+    dl
+      dt
+        color: $heading
+        font-weight: normal
+      dd
+        color:
+
+  .margin-top-20
+    margin-top: 20px
+
+  .edit-form
+    margin: 35px
+
+#create
   .form-wrap
-    textarea
-      margin: 15px 0
     .btn
-      margin-bottom: 100px
+      margin: 15px 0 100px

@@ -31,19 +31,37 @@
         </ul>
       </div>@endif
     </div>
-    <div id="create">
+    <div id="content">
       <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center">Criar nova publicação</h1>
-          <hr>
-        </div>
-        <div class="col-md-6 col-md-offset-3">
-          <div class="form-wrap">
-            {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '')) !!}
-            {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Título', 'required' => '', 'maxlength' => '255')) }}
-            {{ Form::textarea('body', null, array('class'=> 'form-control', 'placeholder' => 'Publicação', 'required' => '')) }}
-            {{ Form::submit('Publicar', array('class' => 'btn btn-lg btn-block btn-success')) }}
-            {!! Form::close() !!}
+        <div class="container-fluid">
+          <div class="col-md-9">
+            <div class="posts-wrap">
+              <div class="post">
+                <h1>{{ $post->title }}</h1>
+                <p class="lead">{{ $post->body }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="sidebar">
+              <dl>
+                <dt>Criada em:</dt>
+                <dd>{{ date('d M Y \à\s H:i:s', strtotime($post->created_at)) }}</dd>
+              </dl>
+              <dl>
+                <dt>Última edição em:</dt>
+                <dd>{{ date('d M Y \à\s H:i:s', strtotime($post->updated_at)) }}</dd>
+              </dl>
+              <hr>
+              <div class="row">
+                <div class="col-sm-6">{!! Html::linkRoute('posts.edit', 'Editar', array($post->id), array('class' => 'btn btn-primary btn-block')) !!}</div>
+                <div class="col-sm-6">
+                  {!! Form::open(array('route' => ['posts.destroy', $post->id], 'method' => 'DELETE')) !!}
+                  {!! Form::submit('Apagar', array('class' => 'btn btn-danger btn-block')) !!}
+                  {!! Form::close() !!}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
