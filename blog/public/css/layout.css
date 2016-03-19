@@ -48,12 +48,18 @@
 html, body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  background-color: #fcfaec; }
+  background-color: white; }
+
+a {
+  color: #d78383; }
+  a:hover {
+    color: rgba(215, 131, 131, 0.8);
+    text-decoration: none; }
 
 hr {
   border: 0px;
   height: 1px;
-  background: rgba(150, 150, 150, 0.4);
+  background: #b6b5af;
   width: 50%;
   margin: 50px auto; }
 
@@ -72,6 +78,69 @@ textarea {
     font-size: 96px; }
   .header p {
     margin: 0 auto 50px; }
+
+.navbar {
+  text-align: center; }
+  .navbar hr {
+    width: 800px;
+    margin: 0px auto; }
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .navbar ul li {
+      display: inline-block;
+      margin: 0 20px;
+      text-transform: uppercase;
+      padding: 10px 0;
+      font-size: 12px;
+      font-family: "Open Sans", sans-serif; }
+
+.content .featured {
+  position: relative;
+  margin: 50px auto; }
+  .content .featured hr {
+    width: 100%;
+    margin: 5px 0;
+    background: #d0d0d0; }
+  .content .featured .img-wrap {
+    height: 500px;
+    overflow: hidden; }
+    .content .featured .img-wrap img {
+      margin-top: -20%;
+      max-width: 100%; }
+  .content .featured .featured-post-wrap {
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    left: 0;
+    width: 70%;
+    text-align: justify;
+    color: white; }
+    .content .featured .featured-post-wrap h2 {
+      font-family: "Volkhov", serif;
+      font-size: 48px;
+      margin: 0; }
+    .content .featured .featured-post-wrap p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      margin: 0 0 30px; }
+    .content .featured .featured-post-wrap .read-more {
+      color: white;
+      background: rgba(231, 70, 70, 0.9);
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: "Open Sans", sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      border-radius: 0px;
+      padding: 10px 30px; }
+      .content .featured .featured-post-wrap .read-more:hover {
+        background: #e74646; }
+      .content .featured .featured-post-wrap .read-more:active {
+        background: rgba(231, 70, 70, 0.9); }
 
 #content .featured {
   background: rgba(227, 224, 208, 0.7);
@@ -99,7 +168,7 @@ textarea {
       color: rgba(0, 0, 0, 0.8); }
     #content .posts-wrap .post .criado-por {
       font-size: 14px;
-      text-align: right; }
+      text-align: left; }
 
 #content .sidebar {
   margin: 30px 0 0;
@@ -125,7 +194,7 @@ textarea {
   text-align: center;
   height: 330px;
   color: rgba(255, 255, 255, 0.7);
-  background-color: #fcfaec; }
+  background-color: white; }
   #footer .links-wrap {
     padding-top: 50px;
     text-transform: uppercase;
@@ -161,8 +230,9 @@ textarea {
       cursor: default; }
   #footer .copyright-wrap {
     position: absolute;
+    top: 400px;
     right: 0;
-    bottom: 0;
+    bottom: 50px;
     left: 0;
     text-transform: uppercase;
     font-family: "Cabin", sans-serif;

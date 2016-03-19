@@ -20,7 +20,7 @@ block content
               th Criada em
               th 
             tbody
-              @foreach ($posts as $post)
+              | @foreach ($posts as $post)
               tr
                 th {{ $post->id }}
                 td {{ $post->title }}
@@ -30,5 +30,7 @@ block content
                   a.btn.btn-default(href!="{{ route('posts.show', $post->id) }}") Ver
                   |  
                   a.btn.btn-default(href!="{{ route('posts.edit', $post->id) }}") Editar
-              @endforeach
+              | @endforeach
+          .text-center
+            | {!! $posts->links() !!}
     hr

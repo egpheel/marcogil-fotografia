@@ -20,8 +20,11 @@ block content
             hr
             .row
               .col-sm-6
-                {!! Html::linkRoute('posts.edit', 'Editar', array($post->id), array('class' => 'btn btn-primary btn-block')) !!}
+                | {!! Html::linkRoute('posts.edit', 'Editar', array($post->id), array('class' => 'btn btn-primary btn-block')) !!}
               .col-sm-6
-                {!! Form::open(array('route' => ['posts.destroy', $post->id], 'method' => 'DELETE')) !!}
-                {!! Form::submit('Apagar', array('class' => 'btn btn-danger btn-block')) !!}
-                {!! Form::close() !!}
+                | {!! Form::open(array('route' => ['posts.destroy', $post->id], 'method' => 'DELETE')) !!}
+                | {!! Form::submit('Apagar', array('class' => 'btn btn-danger btn-block')) !!}
+                | {!! Form::close() !!}
+            .row
+              .col-sm-12
+                | {!! Html::linkRoute('posts.index', 'Todas as publicações', array(), array('class' => 'btn btn-default btn-block margin-top-20')) !!}

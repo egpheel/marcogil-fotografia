@@ -1,3 +1,59 @@
+.content
+  .featured
+    position: relative
+    margin: 50px auto
+
+    hr
+      width: 100%
+      margin: 5px 0
+      background: $featured-border
+
+    .img-wrap
+      height: 500px
+      overflow: hidden
+
+      img
+        margin-top: -20%
+        max-width: 100%
+
+    .featured-post-wrap
+      margin: 0 auto
+      +position(absolute, null 0 60px 0)
+      width: 70%
+      text-align: justify
+      color: $featured-text
+
+      h2
+        font:
+          family: $blog-font
+          size: 48px
+        margin: 0
+
+      p
+        font:
+          family: $primary-font
+          size: 20px
+          weight: 300
+        margin: 0 0 30px
+
+      .read-more
+        color: $featured-text
+        background: transparentize($read-more, 0.1)
+        text-transform: uppercase
+        text-decoration: none
+        font:
+          family: $primary-font
+          size: 24px
+          weight: 300
+        border-radius: 0px
+        padding: 10px 30px
+
+        &:hover
+          background: $read-more
+
+        &:active
+          background: transparentize($read-more, 0.1)
+
 #content
   .featured
     background: $featured
@@ -33,7 +89,7 @@
 
       .criado-por
         font-size: 14px
-        text-align: right
+        text-align: left
 
   .sidebar
     margin: 30px 0 0
