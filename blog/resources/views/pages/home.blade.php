@@ -13,15 +13,28 @@
     <script src="/js/parsley/parsley.js"></script>
     <script src="/js/parsley/pt-pt.js"></script>
     <link rel="stylesheet" href="/css/parsley.css">
+    <!--infinitescroll-->
+    <script src="/js/infinitescroll/infinitescroll.js"></script>
     <!--my CSS-->
     <link rel="stylesheet" href="/css/layout.css">
     <title>Marco Gil - Blog</title>
+    <!--my js-->
+    <script src="/js/functions.js"></script>
   </head>
   <body>
     <div class="header">
       <h1>Marco Gil</h1>
       <p><em>frase bastante sexy sobre cenas e viagens e assim</em></p>
     </div>
+    <section class="navbar">
+      <hr>
+      <ul><a href="#">
+          <li>Categorias</li></a><a href="#">
+          <li>Crónicas</li></a><a href="#">
+          <li>Sobre</li></a><a href="#">
+          <li>Contacto</li></a></ul>
+      <hr>
+    </section>
     <div class="container">@if (Session::has('success'))
       <div role="alert" class="alert alert-success"><strong>Successo: </strong>{{ Session::get('success') }}</div>@endif
       @if (count($errors) > 0)
@@ -31,54 +44,52 @@
         </ul>
       </div>@endif
     </div>
-    <div id="content">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="featured">
-            <h1>Em destaque</h1>
-            <p class="lead">Esta publicação está em destaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus perferendis cupiditate quod perspiciatis? Debitis sequi deserunt soluta, provident quo. Dolor mollitia quos illum magnam at quas, consectetur sed totam aspernatur!</p>
-          </div>
+    <section class="content">
+      <div class="featured">
+        <hr>
+        <div class="img-wrap"><img src="/img/featured-temp.jpg" alt="Publicação em destaque"></div>
+        <hr>
+        <div class="featured-post-wrap">
+          <h2>Pelas ruas de Amesterdão</h2>
+          <p>As ruas de Amesterdão são na sua maioria compostas por bicicletas, ou veículos de duas rodas. Mas esta é uma via de carros e tram´s...tive por isso a sorte de apanhar Roger a pedalar pela vida e pela cidade.</p><a href="#" class="read-more">Ler mais</a>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-9">
-          <div class="posts-wrap">@foreach ($posts as $post)
-            <div class="post">
-              <h2><a href="#">{{ $post->title }}</a></h2>
-              <p>{{ $post->body }}</p>
-              <div class="criado-por">
-                <p> <a href="{{ route('posts.show', $post->id) }}">#</a>
-                  <time datetime="{{ $post->created_at->toAtomString() }}" class="post-created-at"> {{ $post->created_at->format('j-m-Y H:i') }}</time>
-                </p>
-              </div>
-              <hr>
-            </div>@endforeach
-            <div class="text-center">{!! $posts->links() !!}</div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="sidebar">
-            <div class="most-recent">
-              <h4>Mais recentes</h4>
-              <ul>
-                <li><a href="#">Publicação 1</a></li>
-                <li><a href="#">Publicação 2</a></li>
-                <li><a href="#">Publicação 3</a></li>
-                <li><a href="#">Publicação 4</a></li>
-              </ul>
+      <div class="posts-wrap">     
+        <div class="posts">
+          <div class="last-post">
+            <div class="last-post-img"><img src="/img/post-temp.jpg" alt="Publicação"></div>
+            <p class="date">
+              <time datetime="{{ $posts[0]->created_at->toAtomString() }}">{{ $posts[0]->date }}</time>
+            </p>
+            <h2>{{ $posts[0]->title }}</h2>
+            <p>{{ substr($posts[0]->body, 0, 350) }}{{ strlen($posts[0]->body)>350 ? '...' : '' }}</p>
+            <ul><a href="#">
+                <li>Perspectivas</li></a><a href="#">
+                <li>Música</li></a><a href="#">
+                <li>Viver</li></a><a href="#">
+                <li>Viajar</li></a></ul>
+            <hr>
+          </div>@foreach ($posts as $post)
+          @if ($post->id != $posts[0]->id)
+          <div class="post">
+            <div class="post-img"><img src="/img/post-temp.jpg" alt="Publicação"></div>
+            <div class="post-info">
+              <p class="date">
+                <time datetime="{{ $post->created_at->toAtomString() }}">{{ $post->date }}</time>
+              </p>
+              <h2>{{ $post->title }}</h2>
+              <p>{{ substr($post->body, 0, 100) }}{{ strlen($post->body)>100 ? '...' : '' }}</p>
+              <ul><a href="#">
+                  <li>Perspectivas</li></a><a href="#">
+                  <li>Música</li></a><a href="#">
+                  <li>Viver</li></a><a href="#">
+                  <li>Viajar</li></a></ul>
             </div>
-            <div class="categories">
-              <h4>Categorias</h4>
-              <ul>
-                <li><a href="#">Categoria 1</a></li>
-                <li><a href="#">Categoria 2</a></li>
-                <li><a href="#">Categoria 3</a></li>
-              </ul>
-            </div>
-          </div>
+          </div>@endif
+          @endforeach
+          {!! $posts->render() !!}
         </div>
       </div>
-    </div>
-    <div id="footer"></div>
+    </section>
   </body>
 </html>
