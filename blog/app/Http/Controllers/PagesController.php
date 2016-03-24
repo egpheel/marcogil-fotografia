@@ -7,6 +7,7 @@ class PagesController extends Controller {
 
   public function getIndex() {
     $posts = Post::orderBy('created_at', 'desc')->paginate(5);
+    $recent_posts = Post::orderBy('created_at', 'desc')->take(10)->get();
 
     foreach ($posts as $post) {
       switch ($post->created_at->month) {
@@ -56,7 +57,7 @@ class PagesController extends Controller {
       $post->date = $date;
     }
 
-    return view('pages.home')->with('posts', $posts);
+    return view('pages.home')->with('posts', $posts)->with('recent_posts', $recent_posts);
   }
 
 }

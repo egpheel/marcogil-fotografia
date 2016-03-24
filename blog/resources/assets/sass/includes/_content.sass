@@ -63,82 +63,62 @@
   .posts-wrap
     margin: 100px auto 0
     width: 80%
-    box-shadow: 0 0 3px 1px $navbar-shadow
+    box-shadow: 0 0 3px 1px $shadow
+    position: relative
 
     .posts
-      max-width: 100%
-      +display(flex)
-      +flex-wrap(wrap)
-      +justify-content(space-around)
-      +align-items(flex-start)
+      width: 75%
+      padding: 25px
+      display: inline-block
 
-      .last-post
+      .post
+        margin: 0 0 30px
         width: 100%
-        padding: 20px
 
-        .last-post-img
-          position: relative
-          height: 400px
-          overflow: hidden
-          margin-bottom: 10px
-
-          img
-            position: absolute
-            top: 50%
-            min-height: 100%
-            display: block
-            left: 50%
-            +transform(translate(-50%, -50%))
-            min-width: 100%
-
-      .last-post, .post
-        p.date
-          font:
-            family: $primary-font
-            size: 12px
-            weight: 700
-          text-transform: uppercase
-          color: $post-paragraph
-          margin: 0
-
-        h2
-          font:
-            family: $blog-font
-            size: 42px
-          margin: 10px 0
-          color: $post-title
-
-        p
-          text-align: justify
-          font:
-            family: $primary-font
-            size: 20px
-            weight: 300
-          margin: 0
-          color: $post-paragraph
-
-        ul
-          list-style-type: none
-          padding: 0
-          margin-top: 25px
-
-          a
-            margin: 0 20px 0 0
-            padding: 0
-
-          li
-            text-transform: uppercase
+        .post-info
+          p.date
             font:
               family: $primary-font
               size: 12px
               weight: 700
-            display: inline-block
-            padding: 0
+            text-transform: uppercase
+            color: $post-paragraph
             margin: 0
 
-      .post
-        margin: 20px 0 30px
-        width: 500px
+          h2
+            font:
+              family: $blog-font
+              size: 42px
+            margin: 10px 0
+            color: $post-title
+
+          p
+            text-align: justify
+            font:
+              family: $primary-font
+              size: 20px
+              weight: 300
+            margin: 15px 0
+            color: $post-paragraph
+
+          ul
+            list-style-type: none
+            padding: 0
+            margin-top: 25px
+
+            a
+              margin: 0 20px 0 0
+              padding: 0
+
+            li
+              text-transform: uppercase
+              font:
+                family: $primary-font
+                size: 12px
+                weight: 700
+              display: inline-block
+              padding: 0
+              margin: 0
 
         .post-img
           height: 400px
@@ -154,64 +134,34 @@
             +transform(translate(-50%, -50%))
             min-width: 100%
 
-        .post-info
-          padding: 10px
-          border-left: 1px solid $hr-color
-          border-right: 1px solid $hr-color
-          border-bottom: 1px solid $hr-color
-
-#content
-  .featured
-    background: $featured
-    padding: 50px 100px
-    margin: 20px 50px 50px
-    text-align: justify
-    border-radius: 5px
-
-    h1
-      margin: 0 0 20px
-      font:
-        size: 60px
-        family: $primary-font
-
-    p
-      font:
-        family: $primary-font
-
-  .posts-wrap
-    margin: 0 0 100px
-    .post
-      margin: 30px 50px
-      text-align: justify
-
-      h1
-        margin: 0 0 15px
-        font:
-          size: 48px
-        color: $heading
+    .sidebar
+      display: inline-block
+      width: 25%
+      +position(absolute, 0 0 null null)
+      padding: 25px
 
       p
-        color: $paragraph
+        font:
+          family: $primary-font
+          size: 20px
+          weight: 300
+        color: $post-paragraph
+        margin-bottom: 15px
 
-      .criado-por
-        font-size: 14px
-        text-align: left
+      ul
+        list-style-type: none
+        padding: 0 10px
 
-  .sidebar
-    margin: 30px 0 0
-    border-left: 1px solid $vr-color
-    padding: 20px 30px
+        a
+          margin: 0
+          padding: 0
 
-    .most-recent, .categories
-      margin: 20px 0 50px
+        li
+          font-size: 14px
+          margin: 5px 0
+          padding: 0
 
-    dl
-      dt
-        color: $heading
-        font-weight: normal
-      dd
-        color:
-
+#content
   .margin-top-20
     margin-top: 20px
 

@@ -56,38 +56,32 @@
       </div>
       <div class="posts-wrap">     
         <div class="posts">
-          <div class="last-post">
-            <div class="last-post-img"><img src="/img/post-temp.jpg" alt="Publicação"></div>
-            <p class="date">
-              <time datetime="{{ $posts[0]->created_at->toAtomString() }}">{{ $posts[0]->date }}</time>
-            </p>
-            <h2>{{ $posts[0]->title }}</h2>
-            <p>{{ substr($posts[0]->body, 0, 350) }}{{ strlen($posts[0]->body)>350 ? '...' : '' }}</p>
-            <ul><a href="#">
-                <li>Perspectivas</li></a><a href="#">
-                <li>Música</li></a><a href="#">
-                <li>Viver</li></a><a href="#">
-                <li>Viajar</li></a></ul>
-            <hr>
-          </div>@foreach ($posts as $post)
-          @if ($post->id != $posts[0]->id)
+             
+          @foreach ($posts as $post)
           <div class="post">
-            <div class="post-img"><img src="/img/post-temp.jpg" alt="Publicação"></div>
             <div class="post-info">
               <p class="date">
                 <time datetime="{{ $post->created_at->toAtomString() }}">{{ $post->date }}</time>
               </p>
               <h2>{{ $post->title }}</h2>
-              <p>{{ substr($post->body, 0, 100) }}{{ strlen($post->body)>100 ? '...' : '' }}</p>
+            </div>
+            <div class="post-img"><img src="/img/post-temp.jpg" alt="Publicação"></div>
+            <div class="post-info">
+              <p>{{ $post->body }}</p>
               <ul><a href="#">
                   <li>Perspectivas</li></a><a href="#">
                   <li>Música</li></a><a href="#">
                   <li>Viver</li></a><a href="#">
                   <li>Viajar</li></a></ul>
             </div>
-          </div>@endif
-          @endforeach
+            <hr>
+          </div>@endforeach
           {!! $posts->render() !!}
+        </div>
+        <div class="sidebar">
+          <p>Publicações recentes</p>
+          <ul>@foreach ($recent_posts as $post)<a href="#">
+              <li>{{ $post->title }}</li></a>@endforeach</ul>
         </div>
       </div>
     </section>

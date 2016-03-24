@@ -1,7 +1,5 @@
 var elixir = require('laravel-elixir');
 
-require('laravel-elixir-jade');
-
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -15,13 +13,8 @@ require('laravel-elixir-jade');
 
 elixir(function(mix) {
     mix.sass('layout.sass', 'public/css/layout.css');
-    mix.jade({
-      search: '/*/*.jade',
-      dest: '/views/',
-      src: '/assets/jade/'
-    });
     mix.browserSync({
-      proxy: 'localhost:8000',
-      notify: false
+      open: false,
+      proxy: 'marcogil.blog'
     });
 });
