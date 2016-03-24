@@ -7,7 +7,7 @@
   <script src="/js/functions.js"></script>
 @endsection
 
-@section('title', 'Blog')
+@section('title', '- Blog')
 
 @section('content')
   <section class="content">

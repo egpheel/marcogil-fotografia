@@ -18,7 +18,7 @@
 
     <!--my CSS-->
     <link rel="stylesheet" href="/css/layout.css">
-    <title>Marco Gil - @yield('title')</title>
+    <title>Marco Gil @yield('title')</title>
   </head>
   <body>
     @include('partials._header')
