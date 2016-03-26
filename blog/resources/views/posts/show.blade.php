@@ -38,7 +38,7 @@
             <div class="posts-wrap">
               <div class="post">
                 <h1>{{ $post->title }}</h1>
-                <p class="lead">{{ $post->body }}</p>
+                <p class="lead">{!! nl2br(e($post->body)) !!}</p>
               </div>
             </div>
           </div>

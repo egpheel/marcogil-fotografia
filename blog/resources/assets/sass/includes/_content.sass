@@ -85,6 +85,12 @@
             color: $post-paragraph
             margin: 0
 
+          a.title
+            color: $post-title
+
+            &:hover
+              color: transparentize($post-title, 0.1)
+
           h2
             font:
               family: $blog-font
@@ -140,6 +146,9 @@
       +position(absolute, 0 0 null null)
       padding: 25px
 
+      hr
+        margin: 30px auto
+
       p
         font:
           family: $primary-font
@@ -151,10 +160,6 @@
       ul
         list-style-type: none
         padding: 0 10px
-
-        a
-          margin: 0
-          padding: 0
 
         li
           font-size: 14px

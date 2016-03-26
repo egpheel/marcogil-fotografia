@@ -41,11 +41,12 @@ class PostController extends Controller
    */
   public function store(Request $request)
   {
-    $this->validate($request, array('title' => 'required|max:255', 'body' => 'required'));
+    $this->validate($request, array('title' => 'required|max:255|unique:posts,title', 'body' => 'required'));
 
     $post = new Post;
 
     $post->title = $request->title;
+    $post->slug = str_slug($request->title, '-');
     $post->body = $request->body;
 
     $post->save();
@@ -91,7 +92,7 @@ class PostController extends Controller
    */
   public function update(Request $request, $id)
   {
-    $this->validate($request, array('title' => 'required|max:255', 'body' => 'required'));
+    $this->validate($request, array('title' => 'required|max:255|unique:posts,title', 'body' => 'required'));
 
     $post = Post::find($id);
 

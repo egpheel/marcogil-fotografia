@@ -25,5 +25,7 @@
 
 Route::group(['middleware' => ['web']], function () {
   Route::get('/', 'PagesController@getIndex');
+  Route::get('publicacoes/{year}/{month}/{slug}', ['as' => 'blog.publicacao', 'uses' => 'BlogController@getPublicacao']);
+  Route::get('arquivo/{year}/{month}', ['as' => 'blog.arquivo', 'uses' => 'BlogController@getArchive']);
   Route::resource('posts', 'PostController');
 });

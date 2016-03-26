@@ -75,6 +75,10 @@ textarea {
   .header h1 {
     margin: 50px auto 0px;
     font-size: 96px; }
+    .header h1 a {
+      color: #333333; }
+      .header h1 a:hover, .header h1 a:active, .header h1 a:visited, .header h1 a:link {
+        text-decoration: none; }
   .header p {
     margin: 0 auto 50px; }
 
@@ -84,7 +88,7 @@ textarea {
     width: 800px;
     margin: 0px auto; }
   .navbar ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0; }
     .navbar ul li {
@@ -167,6 +171,10 @@ textarea {
         text-transform: uppercase;
         color: #7a7a7a;
         margin: 0; }
+      .content .posts-wrap .posts .post .post-info a.title {
+        color: #333333; }
+        .content .posts-wrap .posts .post .post-info a.title:hover {
+          color: rgba(51, 51, 51, 0.9); }
       .content .posts-wrap .posts .post .post-info h2 {
         font-family: "Volkhov", serif;
         font-size: 42px;
@@ -214,6 +222,8 @@ textarea {
     top: 0;
     right: 0;
     padding: 25px; }
+    .content .posts-wrap .sidebar hr {
+      margin: 30px auto; }
     .content .posts-wrap .sidebar p {
       font-family: "Open Sans", sans-serif;
       font-size: 20px;
@@ -223,9 +233,6 @@ textarea {
     .content .posts-wrap .sidebar ul {
       list-style-type: none;
       padding: 0 10px; }
-      .content .posts-wrap .sidebar ul a {
-        margin: 0;
-        padding: 0; }
       .content .posts-wrap .sidebar ul li {
         font-size: 14px;
         margin: 5px 0;

@@ -7,11 +7,6 @@ class PagesController extends Controller {
 
   public function getIndex() {
     $posts = Post::orderBy('created_at', 'desc')->paginate(5);
-    $recent_posts = Post::orderBy('created_at', 'desc')->take(10)->get();
-
-    $archives = Post::latest()->get()->groupBy(function($date) {
-      return $this->translateMonth($date->created_at->month) . ' ' . $date->created_at->format('Y');
-    });
 
     foreach ($posts as $post) {
       $date = $post->created_at->day . ' ' . $this->translateMonth($post->created_at->month) . ' ' . $post->created_at->year;
@@ -19,10 +14,10 @@ class PagesController extends Controller {
       $post->date = $date;
     }
 
-    return view('pages.home')->with('posts', $posts)->with(compact('recent_posts'))->with(compact('archives'));
+    return view('pages.home')->with(compact('posts'));
   }
 
-  function translateMonth($date) {
+  private function translateMonth($date) {
     switch ($date) {
       case 1:
         $month = 'Janeiro';
