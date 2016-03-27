@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Post;
+use App\Tag;
 use Session;
 
 class PostController extends Controller
@@ -30,7 +31,9 @@ class PostController extends Controller
    */
   public function create()
   {
-    return view('posts.create');
+    $tags = Tag::orderBy('name', 'asc')->lists('name', 'id');
+
+    return view('posts.create', compact('tags'));
   }
 
   /**
@@ -41,20 +44,11 @@ class PostController extends Controller
    */
   public function store(Request $request)
   {
-    $this->validate($request, array('title' => 'required|max:255|unique:posts,title', 'body' => 'required'));
+    $this->createPost($request);
 
-    $post = new Post;
-
-    $post->title = $request->title;
-    $post->slug = str_slug($request->title, '-');
-    $post->body = $request->body;
-
-    $post->save();
-
-    //flash message
     Session::flash('success', 'A publicação foi criada com sucesso.');
 
-    return redirect()->route('posts.show', $post->id);
+    return redirect()->route('posts.index');
   }
 
   /**
@@ -79,8 +73,9 @@ class PostController extends Controller
   public function edit($id)
   {
     $post = Post::find($id);
+    $tags = Tag::orderBy('name', 'asc')->lists('name', 'id');
 
-    return view('posts.edit')->with('post', $post);
+    return view('posts.edit', compact('post', 'tags'));
   }
 
   /**
@@ -92,14 +87,11 @@ class PostController extends Controller
    */
   public function update(Request $request, $id)
   {
-    $this->validate($request, array('title' => 'required|max:255|unique:posts,title', 'body' => 'required'));
+    $this->updatePost($request, $id);
 
     $post = Post::find($id);
 
-    $post->title = $request->input('title');
-    $post->body = $request->input('body');
-
-    $post->save();
+    $this->syncTags($post, $request->input('tag_list'));
 
     Session::flash('success', 'A publicação foi editada com successo.');
 
@@ -122,4 +114,70 @@ class PostController extends Controller
 
     return redirect()->route('posts.index');
   }
+
+  /**
+   * Create a new post.
+   */
+  private function createPost(Request $request)
+  {
+    $this->validate($request, array('title' => 'required|max:255|unique:posts,title', 'body' => 'required'));
+
+    $post = new Post;
+
+    $post->title = $request->title;
+    $post->slug = str_slug($request->title, '-');
+    $post->body = $request->body;
+
+    $post->save();
+
+    $this->syncTags($post, $request->input('tag_list'));
+  }
+
+  /**
+   * Update the post.
+   */
+  private function updatePost(Request $request, $id)
+  {
+    $this->validate($request, array('title' => 'required|max:255', 'body' => 'required'));
+
+    $post = Post::find($id);
+
+    $post->title = $request->input('title');
+    $post->body = $request->input('body');
+
+    $post->save();
+  }
+
+  /**
+   * Sync the list of tags in the DB.
+   */
+  private function syncTags(Post $post, array $tags)
+  {
+    $syncTagsList = $this->checkForNewTags($tags);
+
+    $post->tags()->sync($syncTagsList);
+  }
+
+
+  private function checkForNewTags(array $tags_id)
+	{
+		$allDBTags = Tag::lists('id')->toArray(); // get all the tags in the db
+
+		$newTagsList = array_diff($tags_id, $allDBTags);
+
+		$syncTagsList = array_diff($tags_id, $newTagsList);
+
+		foreach ($newTagsList as $newTag)
+		{
+			// create a new tag
+
+			$newTagModel = Tag::create(['name' => $newTag]);
+
+			$syncTagsList[] = $newTagModel->id;
+
+		}
+
+		return $syncTagsList;
+	}
+
 }

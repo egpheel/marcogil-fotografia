@@ -9,6 +9,10 @@
 
 @section('title', '- '. $post->title)
 
+@section('navbar')
+  @include('partials._navbar')
+@endsection
+
 @section('content')
   <section class="content">
     <div class="posts-wrap">
@@ -25,20 +29,15 @@
           </div>
           <div class="post-info">
             <p>{!! nl2br(e($post->body)) !!}</p>
-            <ul>
-              <a href="#">
-                <li>Perspectivas</li>
-              </a>
-              <a href="#">
-                <li>Música</li>
-              </a>
-              <a href="#">
-                <li>Viver</li>
-              </a>
-              <a href="#">
-                <li>Viajar</li>
-              </a>
-            </ul>
+            @unless ($post->tags->isEmpty())
+              <ul>
+                @foreach ($post->tags as $tag)
+                  <a href="#">
+                    <li>{{ $tag->name }}</li>
+                  </a>
+                @endforeach
+              </ul>
+            @endunless
           </div>
           <hr>
         </div>

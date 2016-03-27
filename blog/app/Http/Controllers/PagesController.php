@@ -14,7 +14,7 @@ class PagesController extends Controller {
       $post->date = $date;
     }
 
-    return view('pages.home')->with(compact('posts'));
+    return view('pages.home', compact('posts'));
   }
 
   private function translateMonth($date) {

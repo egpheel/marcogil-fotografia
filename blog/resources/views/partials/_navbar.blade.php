@@ -1,11 +1,11 @@
 <section class="navbar">
   <hr>
   <ul>
-    <a href="#">
-      <li>Categorias</li>
+    <a href="\">
+      <li>Blog</li>
     </a>
     <a href="#">
-      <li>Crónicas</li>
+      <li>Categorias</li>
     </a>
     <a href="#">
       <li>Sobre</li>

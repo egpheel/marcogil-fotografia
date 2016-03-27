@@ -9,11 +9,8 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    @yield('stylesheets')
 
-    <!--parsleyjs-->
-    <script src="/js/parsley/parsley.js"></script>
-    <script src="/js/parsley/pt-pt.js"></script>
-    <link rel="stylesheet" href="/css/parsley.css">
     @yield('scripts')
 
     <!--my CSS-->
@@ -22,8 +19,9 @@
   </head>
   <body>
     @include('partials._header')
-    @include('partials._navbar')
+    @yield('navbar')
     @include('partials._flash')
     @yield('content')
+    @yield('footer')
   </body>
 </html>
