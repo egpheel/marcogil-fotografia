@@ -16,3 +16,19 @@ $(document).ready(function() {
       });
   })();
 });
+
+$(window).scroll(function() {
+  stickySidebar();
+});
+
+function stickySidebar() {
+  var wScroll = $(window).scrollTop();
+  var offset = $('.posts-wrap').offset().top;
+
+
+  if (wScroll > offset) {
+    $('.sidebar').css('margin-top', wScroll - offset);
+  } else {
+    $('.sidebar').css('margin-top', '0px');
+  }
+}

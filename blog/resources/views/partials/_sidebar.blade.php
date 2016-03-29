@@ -8,6 +8,15 @@
     @endforeach
   </ul>
   <hr>
+  <p>Categorias</p>
+  <ul class='tags'>
+    @foreach ($tags as $tag)
+      <a href="#">
+        <li>{{ $tag->name }}</li>
+      </a>
+    @endforeach
+  </ul>
+  <hr>
   <p>Arquivo</p>
   <ul>
     @foreach($archives as $archive=>$arc)

@@ -237,6 +237,17 @@ textarea {
         font-size: 14px;
         margin: 5px 0;
         padding: 0; }
+    .content .posts-wrap .sidebar .tags li {
+      text-transform: uppercase;
+      font-size: 0.7em;
+      font-weight: 700;
+      display: inline-block;
+      background: #d78383;
+      color: white;
+      padding: 0 5px;
+      border-radius: 3px; }
+      .content .posts-wrap .sidebar .tags li:hover {
+        background: rgba(215, 131, 131, 0.8); }
 
 #content .margin-top-20 {
   margin-top: 20px; }

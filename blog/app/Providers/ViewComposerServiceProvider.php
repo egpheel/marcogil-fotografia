@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Post;
+use App\Tag;
 
 class ViewComposerServiceProvider extends ServiceProvider
 {
@@ -30,13 +31,15 @@ class ViewComposerServiceProvider extends ServiceProvider
     private function composeSidebar()
     {
       view()->composer('partials._sidebar', function($view) {
-        $recent_posts = Post::orderBy('created_at', 'desc')->take(10)->get();
+        $recent_posts = Post::orderBy('created_at', 'desc')->take(6)->get();
 
         $archives = Post::latest()->get()->groupBy(function($date) {
           return $this->translateMonth($date->created_at->month) . ' ' . $date->created_at->format('Y');
         });
 
-        $view->with(compact('recent_posts', 'archives'));
+        $tags = Tag::orderByRaw('RAND()')->take(10)->get();
+
+        $view->with(compact('recent_posts', 'archives', 'tags'));
       });
     }
 
@@ -85,5 +88,5 @@ class ViewComposerServiceProvider extends ServiceProvider
 
       return $month;
     }
-    
+
 }
